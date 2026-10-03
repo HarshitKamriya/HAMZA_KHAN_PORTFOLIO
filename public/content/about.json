@@ -7,10 +7,10 @@
     "introduction": "I am a professional speaker and communication coach originally from Kashmir. My journey to the stage was not a straight line, but a series of unpredictable pivots that taught me the true value of clear communication under pressure.",
     "portrait": {
       "id": "about-portrait",
-      "url": "/media/about-portrait.jpg",
+      "url": "/media/Startup Event Portrait with Trophy and Microphone.png",
       "type": "image",
-      "alt": "Authentic portrait of Hamza Khan",
-      "focalPoint": { "x": 0.5, "y": 0.3 },
+      "alt": "Hamza Khan at a startup event with trophy and microphone",
+      "focalPoint": { "x": 0.5, "y": 0.25 },
       "status": "published"
     },
     "primaryCTA": {
@@ -29,6 +29,14 @@
       "chapterLabel": "01. Starting Point",
       "heading": "Big ambitions. Unclear paths.",
       "body": "Growing up in Kashmir, I always had big ambitions. But like many in my environment, I faced deep uncertainty around opportunities, background, and finances. The path forward was rarely obvious, and the resources were often limited. I had to learn early on how to navigate environments where the rules were not written for me.",
+      "image": {
+        "id": "chapter-certificate",
+        "url": "/media/Certificate of Completion Celebration.png",
+        "type": "image",
+        "alt": "Hamza Khan receiving a certificate of completion",
+        "focalPoint": { "x": 0.5, "y": 0.4 },
+        "status": "published"
+      },
       "order": 1,
       "status": "published",
       "visible": true
@@ -49,9 +57,10 @@
       "body": "I applied a third time, and finally, it succeeded. Moving to Türkiye introduced me to entirely unfamiliar opportunities. I found myself in environments I couldn't have predicted. I decided to start saying 'yes' to these new challenges, seeking out mentorship, and letting the unfamiliar shape my next steps.",
       "image": {
         "id": "about-transition",
-        "url": "/media/about-transition.jpg",
+        "url": "/media/Formal Diplomatic Handshake in an Elegant Hall.png",
         "type": "image",
-        "alt": "Cinematic view from an airport terminal at dusk",
+        "alt": "Hamza Khan in a formal diplomatic handshake at an elegant hall",
+        "focalPoint": { "x": 0.5, "y": 0.35 },
         "status": "published"
       },
       "order": 3,

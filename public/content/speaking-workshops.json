@@ -25,9 +25,9 @@
       "approach": "Explores the psychological barriers to action and provides actionable frameworks for making decisions with imperfect information.",
       "image": {
         "id": "topic-move",
-        "url": "/media/topic-move.jpg",
-        "alt": "Empty stage with microphone spotlight",
-        "focalPoint": { "x": 0.5, "y": 0.5 },
+        "url": "/media/Beyond the Comfort Zone Meetup.png",
+        "alt": "Hamza Khan speaking at Beyond the Comfort Zone meetup at Tech Istanbul",
+        "focalPoint": { "x": 0.5, "y": 0.35 },
         "status": "published"
       },
       "inquiryLabel": "Inquire About Speaking",
@@ -44,9 +44,9 @@
       "approach": "Breaks down the anatomy of a successful pitch: What, How, Proof, and Result, focusing on clarity and relevance over buzzwords.",
       "image": {
         "id": "topic-pitch",
-        "url": "/media/gallery-2.jpg",
-        "alt": "Hamza Khan delivering an impactful talk with microphone",
-        "focalPoint": { "x": 0.5, "y": 0.5 },
+        "url": "/media/Comfort Zone Conference Presentation.png",
+        "alt": "Hamza Khan delivering a presentation at Comfort Zone conference",
+        "focalPoint": { "x": 0.5, "y": 0.3 },
         "status": "published"
       },
       "inquiryLabel": "Inquire About Speaking",
@@ -63,9 +63,9 @@
       "approach": "Currently in development, this topic explores methods for simplifying complex data without losing nuance.",
       "image": {
         "id": "topic-clear",
-        "url": "/media/gallery-1.jpg",
-        "alt": "Hamza Khan commanding the room and engaging an audience",
-        "focalPoint": { "x": 0.5, "y": 0.5 },
+        "url": "/media/Conference Room Presentation on Speech Structure.png",
+        "alt": "Hamza Khan teaching speech structure in a conference room workshop",
+        "focalPoint": { "x": 0.5, "y": 0.4 },
         "status": "published"
       },
       "inquiryLabel": "Inquire About Speaking",
@@ -79,17 +79,49 @@
     {
       "id": "gallery-1",
       "url": "/media/hero-stage.png",
-      "alt": "Hamza Khan delivering keynote address on main stage",
-      "focalPoint": { "x": 0.5, "y": 0.5 },
+      "alt": "Hamza Khan delivering keynote address at WorldDEF Istanbul",
+      "focalPoint": { "x": 0.5, "y": 0.4 },
       "order": 1,
       "status": "published"
     },
     {
       "id": "gallery-2",
-      "url": "/media/video-poster.jpg",
-      "alt": "Hamza Khan facilitating an interactive masterclass",
-      "focalPoint": { "x": 0.5, "y": 0.5 },
+      "url": "/media/Toastmasters Meetup in a Modern Tech Hub.png",
+      "alt": "Hamza Khan hosting a Toastmasters meetup at a modern tech hub",
+      "focalPoint": { "x": 0.5, "y": 0.45 },
       "order": 2,
+      "status": "published"
+    },
+    {
+      "id": "gallery-3",
+      "url": "/media/TEMU Marketplace Masterclass Stage.png",
+      "alt": "Hamza Khan at the WorldDEF TEMU Marketplace Masterclass Stage",
+      "focalPoint": { "x": 0.5, "y": 0.4 },
+      "order": 3,
+      "status": "published"
+    },
+    {
+      "id": "gallery-4",
+      "url": "/media/Beyond the Comfort Zone Meetup.png",
+      "alt": "Beyond the Comfort Zone meetup with Toastmasters and Tech Istanbul",
+      "focalPoint": { "x": 0.5, "y": 0.4 },
+      "order": 4,
+      "status": "published"
+    },
+    {
+      "id": "gallery-5",
+      "url": "/media/Certificate of Completion Celebration.png",
+      "alt": "Hamza Khan receiving a certificate of completion",
+      "focalPoint": { "x": 0.5, "y": 0.4 },
+      "order": 5,
+      "status": "published"
+    },
+    {
+      "id": "gallery-6",
+      "url": "/media/Formal Diplomatic Handshake in an Elegant Hall.png",
+      "alt": "Hamza Khan in a formal diplomatic handshake",
+      "focalPoint": { "x": 0.5, "y": 0.35 },
+      "order": 6,
       "status": "published"
     }
   ],
@@ -116,6 +148,13 @@
       "audience": "Corporate teams, startup founders, and student cohorts.",
       "description": "Interactive sessions focused on helping participants structure a message, consider their audience, practice speaking, and receive relevant feedback.",
       "format": "Interactive group session with live exercises.",
+      "image": {
+        "id": "ws-speech-structure",
+        "url": "/media/Conference Room Presentation on Speech Structure.png",
+        "alt": "Hamza Khan leading a communication workshop on speech structure",
+        "focalPoint": { "x": 0.5, "y": 0.4 },
+        "status": "published"
+      },
       "inquiryLabel": "Discuss a Workshop",
       "inquiryUrl": "/contact?type=workshop",
       "order": 1,

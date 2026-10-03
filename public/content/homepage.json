@@ -14,7 +14,7 @@
     },
     "image": {
       "caption": "Hamza Khan presenting at WorldDEF",
-      "alt": "Hamza Khan speaking on stage at WorldDEF",
+      "alt": "Hamza Khan speaking on stage at WorldDEF Istanbul",
       "focalPoint": {
         "x": 0.5,
         "y": 0.35
@@ -60,9 +60,9 @@
     "description": "Watch Hamza deliver a keynote on effective communication strategies for high-stakes environments.",
     "thumbnail": {
       "id": "video-poster-1",
-      "url": "/media/video-poster.jpg",
+      "url": "/media/TEMU Marketplace Masterclass Stage.png",
       "type": "image",
-      "alt": "Hamza speaking passionately on stage",
+      "alt": "Hamza Khan at the WorldDEF Masterclass Stage",
       "status": "published"
     },
     "fallbackUrl": "/contact?type=speaking",
@@ -100,12 +100,13 @@
   "storyPreview": {
     "headline": "My Story",
     "excerpt": "From navigating uncertainty to speaking on international stages, I've learned that effective communication is the ultimate bridge between ambition and impact.",
-    "pullQuote": "You don’t choose your starting point. You can’t guarantee your destination. But you can choose your direction.",
+    "pullQuote": "You don't choose your starting point. You can't guarantee your destination. But you can choose your direction.",
     "image": {
       "id": "story-preview-img",
-      "url": "/media/story-preview.jpg",
+      "url": "/media/Comfort Zone Conference Presentation.png",
       "type": "image",
-      "alt": "Hamza looking thoughtfully off-camera",
+      "alt": "Hamza Khan delivering a keynote on stage at Beyond the Comfort Zone",
+      "focalPoint": { "x": 0.5, "y": 0.3 },
       "status": "published"
     },
     "ctaLabel": "Discover My Story",
