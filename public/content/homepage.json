@@ -1,0 +1,156 @@
+{
+  "status": "published",
+  "hero": {
+    "eyebrow": "HAMZA KHAN · SPEAKER & COMMUNICATION COACH",
+    "headline": "Make your ideas clear when it matters most.",
+    "subline": "I help professionals turn complex ideas into clear, confident communication — especially under pressure.",
+    "primaryCTA": {
+      "label": "Invite Hamza to Speak",
+      "url": "/contact?type=speaking"
+    },
+    "secondaryCTA": {
+      "label": "Explore Coaching",
+      "url": "/coaching"
+    },
+    "image": {
+      "id": "hero-stage-worlddef",
+      "url": "/media/hero-stage.png",
+      "type": "image",
+      "alt": "Hamza Khan speaking on stage at WorldDEF",
+      "caption": "Hamza Khan presenting at WorldDEF",
+      "credit": "",
+      "rights": "",
+      "focalPoint": { "x": 0.5, "y": 0.35 },
+      "order": 1,
+      "status": "published"
+    }
+  },
+  "credentials": [
+    {
+      "id": "cred-tedx",
+      "label": "TEDx Speaker",
+      "verificationStatus": "approved",
+      "order": 1,
+      "visible": true
+    },
+    {
+      "id": "cred-toastmasters",
+      "label": "Award-Winning Speaker",
+      "shortDescription": "Toastmasters Distinction",
+      "verificationStatus": "approved",
+      "order": 2,
+      "visible": true
+    },
+    {
+      "id": "cred-coach",
+      "label": "Trusted Communication Coach",
+      "verificationStatus": "approved",
+      "order": 3,
+      "visible": true
+    },
+    {
+      "id": "cred-pending-claim",
+      "label": "Global Champion",
+      "verificationStatus": "pending",
+      "order": 4,
+      "visible": true
+    }
+  ],
+  "featuredVideo": {
+    "id": "video-main",
+    "provider": "youtube",
+    "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "title": "Make your ideas clear under pressure",
+    "description": "Watch Hamza deliver a keynote on effective communication strategies for high-stakes environments.",
+    "thumbnail": {
+      "id": "video-poster-1",
+      "url": "/media/video-poster.jpg",
+      "type": "image",
+      "alt": "Hamza speaking passionately on stage",
+      "status": "published"
+    },
+    "fallbackUrl": "/contact?type=speaking",
+    "status": "published"
+  },
+  "services": [
+    {
+      "id": "service-speaking",
+      "title": "Keynote Speaking",
+      "description": "Engaging, actionable keynotes designed to inspire audiences and transform how they communicate.",
+      "ctaLabel": "View Speaking Topics",
+      "ctaUrl": "/speaking-workshops#speaking",
+      "order": 1,
+      "visible": true
+    },
+    {
+      "id": "service-workshops",
+      "title": "Interactive Workshops",
+      "description": "Practical, hands-on sessions for teams to master clarity, structure, and delivery.",
+      "ctaLabel": "Explore Workshops",
+      "ctaUrl": "/speaking-workshops#workshops",
+      "order": 2,
+      "visible": true
+    },
+    {
+      "id": "service-coaching",
+      "title": "1:1 Coaching",
+      "description": "Personalized guidance to refine your communication style and command the room with confidence.",
+      "ctaLabel": "Learn About Coaching",
+      "ctaUrl": "/coaching",
+      "order": 3,
+      "visible": true
+    }
+  ],
+  "storyPreview": {
+    "headline": "My Story",
+    "excerpt": "From navigating uncertainty to speaking on international stages, I've learned that effective communication is the ultimate bridge between ambition and impact.",
+    "pullQuote": "You don’t choose your starting point. You can’t guarantee your destination. But you can choose your direction.",
+    "image": {
+      "id": "story-preview-img",
+      "url": "/media/story-preview.jpg",
+      "type": "image",
+      "alt": "Hamza looking thoughtfully off-camera",
+      "status": "published"
+    },
+    "ctaLabel": "Discover My Story",
+    "ctaUrl": "/about",
+    "visible": true
+  },
+  "featuredTestimonials": [
+    {
+      "id": "test-1",
+      "quote": "Hamza completely transformed the way our leadership team approaches high-stakes presentations. His framework is brilliant.",
+      "category": "speaking",
+      "displayName": "Sarah J.",
+      "role": "VP of Communications",
+      "company": "Tech Innovators",
+      "permissionStatus": "approved",
+      "featured": true,
+      "order": 1,
+      "status": "published"
+    },
+    {
+      "id": "test-2",
+      "quote": "Working 1-on-1 with Hamza gave me the confidence to deliver the most important pitch of my career. Highly recommended.",
+      "category": "coaching",
+      "displayName": "Michael T.",
+      "role": "Startup Founder",
+      "permissionStatus": "approved",
+      "featured": true,
+      "order": 2,
+      "status": "published"
+    }
+  ],
+  "closingInquiry": {
+    "heading": "Ready to communicate with clarity?",
+    "supportingText": "Whether you need an engaging speaker for your next event or personalized coaching to elevate your skills, let's connect.",
+    "primaryCTA": {
+      "label": "Discuss a Speaking Engagement",
+      "url": "/contact?type=speaking"
+    },
+    "secondaryCTA": {
+      "label": "Inquire About Coaching",
+      "url": "/contact?type=coaching"
+    }
+  }
+}

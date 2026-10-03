@@ -1,0 +1,12 @@
+{
+  "siteName": "Hamza Khan",
+  "siteTagline": "Speaker & Communication Coach",
+  "siteDescription": "I help professionals turn complex ideas into clear, confident communication — especially under pressure.",
+  "navigation": [
+    { "label": "Home", "url": "/" },
+    { "label": "About", "url": "/about" },
+    { "label": "Speaking & Workshops", "url": "/speaking-workshops" },
+    { "label": "Coaching", "url": "/coaching" },
+    { "label": "Contact", "url": "/contact" }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "hero-stage-worlddef",
+    "url": "/media/hero-stage.png",
+    "type": "image",
+    "alt": "Hamza Khan speaking on stage at WorldDEF",
+    "caption": "Hamza Khan presenting at WorldDEF",
+    "credit": "",
+    "rights": "",
+    "focalPoint": { "x": 0.5, "y": 0.35 },
+    "order": 1,
+    "status": "published"
+  },
+  {
+    "id": "video-poster-1",
+    "url": "/media/video-poster.jpg",
+    "type": "image",
+    "alt": "Hamza speaking passionately on stage",
+    "caption": "",
+    "credit": "",
+    "rights": "",
+    "focalPoint": { "x": 0.5, "y": 0.5 },
+    "order": 2,
+    "status": "published"
+  },
+  {
+    "id": "story-preview-img",
+    "url": "/media/story-preview.jpg",
+    "type": "image",
+    "alt": "Hamza looking thoughtfully off-camera",
+    "caption": "",
+    "credit": "",
+    "rights": "",
+    "focalPoint": { "x": 0.5, "y": 0.5 },
+    "order": 3,
+    "status": "published"
+  }
+]

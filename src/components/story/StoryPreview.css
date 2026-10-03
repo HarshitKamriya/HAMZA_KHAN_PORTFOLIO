@@ -1,0 +1,185 @@
+/* ============================================================
+   Story Preview Section
+   ============================================================ */
+
+.story-preview {
+  padding: var(--spacing-5xl) 0;
+  background-color: var(--color-background);
+}
+
+.story-preview__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0;
+}
+
+/* Image Side */
+.story-preview__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.story-preview__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Gradient overlay to blend into background */
+.story-preview__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 70%,
+    var(--color-background) 100%
+  );
+  pointer-events: none;
+}
+
+/* Content Side */
+.story-preview__content {
+  padding: 4rem 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-preview__label {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: var(--text-label-weight);
+  letter-spacing: var(--text-label-ls);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.story-preview__pullquote {
+  font-family: var(--font-display);
+  font-size: var(--text-display-md);
+  font-weight: var(--text-display-md-weight);
+  line-height: var(--text-display-md-lh);
+  letter-spacing: var(--text-display-md-ls);
+  color: var(--color-foreground);
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+/* Decorative Quote Mark */
+.story-preview__pullquote::before {
+  content: '“';
+  position: absolute;
+  top: -2rem;
+  left: -2.5rem;
+  font-family: var(--font-display);
+  font-size: 6rem;
+  line-height: 1;
+  color: rgba(98, 60, 232, 0.15); /* faint primary color */
+  pointer-events: none;
+}
+
+.story-preview__excerpt {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  color: var(--color-muted);
+  margin-bottom: 3rem;
+  max-width: 44ch;
+}
+
+.story-preview__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--color-foreground);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color var(--transition-fast),
+              background-color var(--transition-fast),
+              transform var(--transition-fast);
+  align-self: flex-start;
+}
+
+.story-preview__cta:hover {
+  border-color: var(--color-borderHover);
+  background-color: rgba(247, 245, 251, 0.04);
+  transform: translateY(-1px);
+}
+
+.story-preview__cta:active {
+  transform: translateY(0);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1280px) {
+  .story-preview__content {
+    padding: 3rem 4rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .story-preview__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .story-preview__media {
+    order: 2;
+    aspect-ratio: 16 / 9;
+  }
+  
+  .story-preview__media::after {
+    background: linear-gradient(
+      to bottom,
+      var(--color-background) 0%,
+      transparent 30%,
+      transparent 100%
+    );
+  }
+
+  .story-preview__content {
+    order: 1;
+    padding: 0 2rem 4rem;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .story-preview__pullquote::before {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -3rem;
+  }
+  
+  .story-preview__cta {
+    align-self: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .story-preview {
+    padding: var(--spacing-4xl) 0 0 0;
+  }
+  
+  .story-preview__content {
+    padding: 0 1.25rem 3rem;
+  }
+  
+  .story-preview__pullquote {
+    font-size: var(--text-heading-lg);
+  }
+}
