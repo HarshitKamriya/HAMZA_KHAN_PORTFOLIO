@@ -43,16 +43,18 @@ body {
   font-family: var(--font-body);
   font-size: var(--text-body-md);
   line-height: 1.6;
-  color: var(--color-foreground);
-  background-color: var(--color-background);
   overflow-x: hidden;
   min-height: 100vh;
+  background-color: #090912; /* Fallback for the body */
+  color: #F7F5FB;
 }
 
 .theme-root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
 }
 
 /* Typography Utilities */

@@ -1,0 +1,27 @@
+/* ============================================================
+   Contact Intro
+   ============================================================ */
+
+.contact-intro {
+  margin-bottom: 3rem;
+}
+
+.contact-intro__title {
+  font-family: var(--font-display);
+  font-size: var(--text-display-md);
+  color: var(--color-foreground);
+  margin-bottom: 1.5rem;
+}
+
+.contact-intro__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  color: var(--color-muted);
+  max-width: 50ch;
+}
+
+@media (max-width: 767px) {
+  .contact-intro__title {
+    font-size: var(--text-heading-lg);
+  }
+}

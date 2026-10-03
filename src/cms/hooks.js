@@ -179,3 +179,33 @@ export function useCoachingPage() {
 
   return { data, loading, error };
 }
+/**
+ * React hook to fetch contact page content from CMS
+ */
+export function useContactPage() {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    import('./client').then(({ getContactPage }) => {
+      getContactPage()
+        .then((result) => {
+          if (!cancelled) {
+            setData(result);
+            setLoading(false);
+          }
+        })
+        .catch((err) => {
+          if (!cancelled) {
+            setError(err);
+            setLoading(false);
+          }
+        });
+    });
+    return () => { cancelled = true; };
+  }, []);
+
+  return { data, loading, error };
+}

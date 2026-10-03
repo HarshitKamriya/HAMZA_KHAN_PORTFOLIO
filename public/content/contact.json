@@ -1,0 +1,32 @@
+{
+  "status": "published",
+  "title": "Contact",
+  "intro": {
+    "heading": "Tell me what you have in mind.",
+    "description": "Whether you are planning an event, exploring a workshop or interested in coaching, send a few details and I will follow up with the appropriate next steps."
+  },
+  "privacyText": "Your information will only be used to respond to your inquiry and discuss potential collaboration.",
+  "successMessage": "Thank you — your inquiry has been submitted. Please watch the email address you provided for a reply.",
+  "failureMessage": "Your message could not be sent. Please try again or use the alternate contact address shown below.",
+  "alternateContact": {
+    "email": "hello@example.com"
+  },
+  "socialLinks": [
+    {
+      "id": "social-li",
+      "platform": "LinkedIn",
+      "label": "Connect on LinkedIn",
+      "url": "https://linkedin.com",
+      "order": 1,
+      "visible": true
+    },
+    {
+      "id": "social-x",
+      "platform": "X",
+      "label": "Follow on X",
+      "url": "https://x.com",
+      "order": 2,
+      "visible": true
+    }
+  ]
+}

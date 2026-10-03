@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import SpeakingWorkshops from './pages/SpeakingWorkshops';
 import Coaching from './pages/Coaching';
-import Placeholder from './pages/Placeholder';
+import Contact from './pages/Contact';
 import './index.css';
 
 export default function App() {
@@ -22,7 +22,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/speaking-workshops" element={<SpeakingWorkshops />} />
             <Route path="/coaching" element={<Coaching />} />
-            <Route path="/contact" element={<Placeholder title="Contact" />} />
+            <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
       </BrowserRouter>

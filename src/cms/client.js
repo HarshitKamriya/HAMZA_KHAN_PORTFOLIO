@@ -108,3 +108,14 @@ export async function getCoachingPage() {
   }
   return response.json();
 }
+/**
+ * Fetch contact page content
+ * @returns {Promise<import('./types').ContactPage>}
+ */
+export async function getContactPage() {
+  const response = await fetch('/content/contact.json');
+  if (!response.ok) {
+    throw new Error(`Failed to fetch contact content: ${response.status}`);
+  }
+  return response.json();
+}

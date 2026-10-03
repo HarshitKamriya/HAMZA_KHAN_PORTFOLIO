@@ -1,0 +1,30 @@
+/* ============================================================
+   Contact Page Layout
+   ============================================================ */
+
+.contact-page {
+  padding: var(--spacing-5xl) var(--container-padding);
+}
+
+.contact-page__inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-page__sidebar {
+  position: sticky;
+  top: 120px;
+}
+
+@media (max-width: 1023px) {
+  .contact-page__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .contact-page__sidebar {
+    position: static;
+  }
+}
