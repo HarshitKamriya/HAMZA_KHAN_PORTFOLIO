@@ -34,5 +34,65 @@
     "focalPoint": { "x": 0.5, "y": 0.5 },
     "order": 3,
     "status": "published"
+  },
+  {
+    "id": "about-portrait",
+    "url": "/media/about-portrait.jpg",
+    "type": "image",
+    "alt": "Authentic portrait of Hamza Khan",
+    "caption": "",
+    "credit": "",
+    "rights": "",
+    "focalPoint": { "x": 0.5, "y": 0.3 },
+    "order": 4,
+    "status": "published"
+  },
+  {
+    "id": "about-transition",
+    "url": "/media/about-transition.jpg",
+    "type": "image",
+    "alt": "Cinematic airport window view at dusk",
+    "caption": "",
+    "credit": "",
+    "rights": "",
+    "focalPoint": { "x": 0.5, "y": 0.5 },
+    "order": 5,
+    "status": "published"
+  },
+  {
+    "id": "topic-move",
+    "url": "/media/topic-move.jpg",
+    "type": "image",
+    "alt": "Empty stage with microphone spotlight",
+    "caption": "",
+    "credit": "",
+    "rights": "",
+    "focalPoint": { "x": 0.5, "y": 0.5 },
+    "order": 6,
+    "status": "published"
+  },
+  {
+    "id": "gallery-1",
+    "url": "/media/gallery-1.jpg",
+    "type": "image",
+    "alt": "Speaker on stage looking at audience",
+    "caption": "",
+    "credit": "",
+    "rights": "",
+    "focalPoint": { "x": 0.5, "y": 0.5 },
+    "order": 7,
+    "status": "published"
+  },
+  {
+    "id": "gallery-2",
+    "url": "/media/gallery-2.jpg",
+    "type": "image",
+    "alt": "Close-up side profile of speaker holding microphone",
+    "caption": "",
+    "credit": "",
+    "rights": "",
+    "focalPoint": { "x": 0.5, "y": 0.5 },
+    "order": 8,
+    "status": "published"
   }
 ]

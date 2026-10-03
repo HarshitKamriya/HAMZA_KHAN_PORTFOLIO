@@ -1,0 +1,136 @@
+{
+  "title": "About Hamza Khan",
+  "seoDescription": "The story and philosophy of Hamza Khan, professional speaker and communication coach.",
+  "status": "published",
+  "intro": {
+    "heading": "The Story Behind Move Before You Know",
+    "introduction": "I am a professional speaker and communication coach originally from Kashmir. My journey to the stage was not a straight line, but a series of unpredictable pivots that taught me the true value of clear communication under pressure.",
+    "portrait": {
+      "id": "about-portrait",
+      "url": "/media/about-portrait.jpg",
+      "type": "image",
+      "alt": "Authentic portrait of Hamza Khan",
+      "focalPoint": { "x": 0.5, "y": 0.3 },
+      "status": "published"
+    },
+    "primaryCTA": {
+      "label": "Explore Speaking & Workshops",
+      "url": "/speaking-workshops"
+    },
+    "secondaryCTA": {
+      "label": "Explore Coaching",
+      "url": "/coaching"
+    },
+    "visible": true
+  },
+  "chapters": [
+    {
+      "id": "starting-point",
+      "chapterLabel": "01. Starting Point",
+      "heading": "Big ambitions. Unclear paths.",
+      "body": "Growing up in Kashmir, I always had big ambitions. But like many in my environment, I faced deep uncertainty around opportunities, background, and finances. The path forward was rarely obvious, and the resources were often limited. I had to learn early on how to navigate environments where the rules were not written for me.",
+      "order": 1,
+      "status": "published",
+      "visible": true
+    },
+    {
+      "id": "setbacks",
+      "chapterLabel": "02. The Setbacks",
+      "heading": "When the door closes twice.",
+      "body": "After being accepted to a university in the United States, I realized the tuition was simply not financially viable. I pivoted and tried to study in Türkiye. The visa application was rejected. I applied again. It was rejected a second time. I still remember the moment my sister came into my bedroom to tell me about the second rejection. It was a profound lesson in facing closed doors when you've already committed to the journey.",
+      "order": 2,
+      "status": "published",
+      "visible": true
+    },
+    {
+      "id": "direction",
+      "chapterLabel": "03. Choosing a Direction",
+      "heading": "Saying yes to the unfamiliar.",
+      "body": "I applied a third time, and finally, it succeeded. Moving to Türkiye introduced me to entirely unfamiliar opportunities. I found myself in environments I couldn't have predicted. I decided to start saying 'yes' to these new challenges, seeking out mentorship, and letting the unfamiliar shape my next steps.",
+      "image": {
+        "id": "about-transition",
+        "url": "/media/about-transition.jpg",
+        "type": "image",
+        "alt": "Cinematic view from an airport terminal at dusk",
+        "status": "published"
+      },
+      "order": 3,
+      "status": "published",
+      "visible": true
+    }
+  ],
+  "milestones": [
+    {
+      "id": "ms-speaking-early",
+      "title": "Early Speaking Experiences",
+      "description": "Entered speaking competitions to challenge my own communication barriers and build confidence.",
+      "category": "speaking",
+      "order": 1,
+      "status": "published",
+      "visible": true
+    },
+    {
+      "id": "ms-mentorship",
+      "title": "Seeking Mentorship",
+      "description": "Actively sought out mentors who could help me refine my structure, delivery, and stage presence.",
+      "category": "mentorship",
+      "order": 2,
+      "status": "published",
+      "visible": true
+    },
+    {
+      "id": "ms-opportunities",
+      "title": "Embracing New Environments",
+      "description": "Began accepting speaking opportunities in unfamiliar environments, learning to adapt to different audiences.",
+      "category": "speaking",
+      "order": 3,
+      "status": "published",
+      "visible": true
+    },
+    {
+      "id": "ms-teaching",
+      "title": "Transition to Teaching",
+      "description": "Started delivering teaching work, sharing the frameworks that helped me find my own voice.",
+      "category": "teaching",
+      "order": 4,
+      "status": "published",
+      "visible": true
+    },
+    {
+      "id": "ms-coaching",
+      "title": "Communication Coaching",
+      "description": "Developed into a full-time communication coach, helping other professionals turn complex ideas into clear, confident communication.",
+      "category": "coaching",
+      "order": 5,
+      "status": "published",
+      "visible": true
+    }
+  ],
+  "philosophy": {
+    "quote": "You don't choose your starting point. You can't guarantee your destination. But you can choose your direction.",
+    "explanation": "This philosophy sits at the core of my work today. Whether I am speaking on a stage or coaching a leader 1-on-1, the goal is always the same: to help you take control of the narrative, communicate with clarity, and deliberately choose your direction, no matter the uncertainty you face.",
+    "primaryCTA": {
+      "label": "Explore Speaking & Workshops",
+      "url": "/speaking-workshops"
+    },
+    "secondaryCTA": {
+      "label": "Explore Coaching",
+      "url": "/coaching"
+    },
+    "visible": true
+  },
+  "finalBio": {
+    "name": "Hamza Khan",
+    "title": "Professional Speaker & Communication Coach",
+    "bio": "Hamza helps professionals turn complex ideas into clear, confident communication—especially under pressure. Drawing from a diverse international background, he equips teams and leaders with the frameworks needed to deliver high-stakes presentations with impact.",
+    "primaryCTA": {
+      "label": "Explore Speaking & Workshops",
+      "url": "/speaking-workshops"
+    },
+    "secondaryCTA": {
+      "label": "Explore Coaching",
+      "url": "/coaching"
+    },
+    "visible": true
+  }
+}

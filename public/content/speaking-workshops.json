@@ -1,0 +1,168 @@
+{
+  "title": "Speaking & Workshops",
+  "seoDescription": "Professional speaking and practical communication workshops by Hamza Khan. Learn how to turn complex ideas into clear, confident communication.",
+  "status": "published",
+  "intro": {
+    "heading": "Speaking & Workshops",
+    "speakingDescription": "Keynotes and facilitated sessions designed to deliver a powerful message to a large audience. Focused on navigating uncertainty and communicating clearly under pressure.",
+    "workshopsDescription": "Practical communication training designed for smaller groups. Focused on hands-on exercises, real-time feedback, and structuring clear messages.",
+    "speakingCTA": {
+      "label": "Explore Speaking",
+      "url": "#speaking"
+    },
+    "workshopsCTA": {
+      "label": "Explore Workshops",
+      "url": "#workshops"
+    }
+  },
+  "topics": [
+    {
+      "id": "topic-1",
+      "title": "Move Before You Know",
+      "status": "delivered",
+      "summary": "A talk about choosing a direction when the next outcome is uncertain.",
+      "audience": "Professionals, leaders, and teams facing ambiguous challenges.",
+      "approach": "Explores the psychological barriers to action and provides actionable frameworks for making decisions with imperfect information.",
+      "image": {
+        "id": "topic-move",
+        "url": "/media/topic-move.jpg",
+        "alt": "Empty stage with microphone spotlight",
+        "focalPoint": { "x": 0.5, "y": 0.5 },
+        "status": "published"
+      },
+      "inquiryLabel": "Inquire About Speaking",
+      "inquiryUrl": "/contact?type=speaking",
+      "order": 1,
+      "visible": true
+    },
+    {
+      "id": "topic-2",
+      "title": "Pitch Yourself in 30 Seconds",
+      "status": "delivered",
+      "summary": "How to deliver a concise, compelling introduction that captures attention immediately.",
+      "audience": "Entrepreneurs, job seekers, and sales professionals.",
+      "approach": "Breaks down the anatomy of a successful pitch: What, How, Proof, and Result, focusing on clarity and relevance over buzzwords.",
+      "inquiryLabel": "Inquire About Speaking",
+      "inquiryUrl": "/contact?type=speaking",
+      "order": 2,
+      "visible": true
+    },
+    {
+      "id": "topic-3",
+      "title": "From Complex to C.L.E.A.R.",
+      "status": "developing",
+      "summary": "An emerging framework for distilling complicated information into understandable, actionable insights.",
+      "audience": "Technical experts, subject matter experts, and academic presenters.",
+      "approach": "Currently in development, this topic explores methods for simplifying complex data without losing nuance.",
+      "inquiryLabel": "Inquire About Speaking",
+      "inquiryUrl": "/contact?type=speaking",
+      "order": 3,
+      "visible": true
+    }
+  ],
+  "videos": [],
+  "gallery": [
+    {
+      "id": "gallery-1",
+      "url": "/media/gallery-1.jpg",
+      "alt": "Speaker on stage looking at audience",
+      "focalPoint": { "x": 0.5, "y": 0.5 },
+      "order": 1,
+      "status": "published"
+    },
+    {
+      "id": "gallery-2",
+      "url": "/media/gallery-2.jpg",
+      "alt": "Close-up side profile of speaker holding microphone",
+      "focalPoint": { "x": 0.5, "y": 0.5 },
+      "order": 2,
+      "status": "published"
+    }
+  ],
+  "credentials": [
+    {
+      "id": "cred-1",
+      "label": "Toastmasters International",
+      "description": "Division-level speaking achievement.",
+      "verificationStatus": "verified",
+      "order": 1,
+      "visible": true
+    }
+  ],
+  "oneSheet": {
+    "url": "",
+    "buttonLabel": "Download Speaker One-Sheet",
+    "visible": false
+  },
+  "workshops": [
+    {
+      "id": "ws-1",
+      "title": "Practical Communication Training",
+      "status": "proposed",
+      "audience": "Corporate teams, startup founders, and student cohorts.",
+      "description": "Interactive sessions focused on helping participants structure a message, consider their audience, practice speaking, and receive relevant feedback.",
+      "format": "Interactive group session with live exercises.",
+      "inquiryLabel": "Discuss a Workshop",
+      "inquiryUrl": "/contact?type=workshop",
+      "order": 1,
+      "visible": true
+    }
+  ],
+  "engagements": [
+    {
+      "id": "eng-1",
+      "organization": "Tech Istanbul",
+      "eventName": "Founders Session",
+      "title": "Startup Pitching & Communication",
+      "audience": "Founders",
+      "status": "delivered",
+      "order": 1,
+      "visible": true
+    },
+    {
+      "id": "eng-2",
+      "organization": "Aspire Institute",
+      "eventName": "",
+      "title": "How to Speak Confidently",
+      "audience": "Professionals",
+      "status": "delivered",
+      "order": 2,
+      "visible": true
+    },
+    {
+      "id": "eng-3",
+      "organization": "Medical Student Cohort",
+      "eventName": "",
+      "title": "Know Your Why, Say Your Hi",
+      "audience": "Medical Students",
+      "status": "delivered",
+      "order": 3,
+      "visible": true
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "test-1",
+      "quote": "Hamza's ability to simplify complex ideas is remarkable. His session helped our team re-evaluate how we communicate our core values.",
+      "category": "speaking",
+      "displayName": "Event Organizer",
+      "role": "Director of L&D",
+      "company": "Professional Association",
+      "order": 1,
+      "visible": true,
+      "status": "published"
+    }
+  ],
+  "closingInquiry": {
+    "heading": "Ready to discuss your event?",
+    "body": "Whether you are planning a large-scale conference or an intimate team workshop, let's explore how we can work together.",
+    "primaryCTA": {
+      "label": "Inquire About Speaking",
+      "url": "/contact?type=speaking"
+    },
+    "secondaryCTA": {
+      "label": "Discuss a Workshop",
+      "url": "/contact?type=workshop"
+    }
+  }
+}

@@ -31,6 +31,30 @@ export async function getHomePage() {
 }
 
 /**
+ * Fetch about page content
+ * @returns {Promise<import('./types').AboutPage>}
+ */
+export async function getAboutPage() {
+  const response = await fetch('/content/about.json');
+  if (!response.ok) {
+    throw new Error(`Failed to fetch about content: ${response.status}`);
+  }
+  return response.json();
+}
+
+/**
+ * Fetch speaking & workshops page content
+ * @returns {Promise<import('./types').SpeakingWorkshopsPage>}
+ */
+export async function getSpeakingWorkshopsPage() {
+  const response = await fetch('/content/speaking-workshops.json');
+  if (!response.ok) {
+    throw new Error(`Failed to fetch speaking-workshops content: ${response.status}`);
+  }
+  return response.json();
+}
+
+/**
  * Fetch site settings
  * @returns {Promise<import('./types').SiteSettings>}
  */

@@ -1,0 +1,64 @@
+/* ============================================================
+   About Final Bio Section
+   ============================================================ */
+
+.final-bio {
+  padding: var(--spacing-5xl) 0;
+  background-color: var(--color-background);
+}
+
+.final-bio__inner {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.final-bio__header {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.final-bio__name {
+  font-family: var(--font-display);
+  font-size: var(--text-heading-xl);
+  font-weight: var(--text-heading-xl-weight);
+  color: var(--color-foreground);
+  margin-bottom: 0.5rem;
+}
+
+.final-bio__title {
+  font-family: var(--font-body);
+  font-size: var(--text-body-md);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+}
+
+.final-bio__body {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  color: var(--color-muted);
+  margin-bottom: 3rem;
+}
+
+.final-bio__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 767px) {
+  .final-bio {
+    padding: var(--spacing-4xl) 0;
+  }
+  
+  .final-bio__actions {
+    flex-direction: column;
+  }
+}

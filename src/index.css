@@ -21,6 +21,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[id] {
+  scroll-margin-top: 100px; /* Offset for fixed header */
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -135,4 +139,64 @@ button {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.container--content {
+  max-width: var(--container-content);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+/* Base button styles matching site theme */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-background);
+  background-color: var(--color-foreground);
+  border: none;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  min-height: 48px; /* Accessible touch target */
+}
+
+.btn-primary:hover {
+  background-color: var(--color-muted);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+  background-color: transparent;
+  border: 1px solid var(--color-borderHover);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  min-height: 48px; /* Accessible touch target */
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-foreground);
+  background-color: rgba(255, 255, 255, 0.05);
 }

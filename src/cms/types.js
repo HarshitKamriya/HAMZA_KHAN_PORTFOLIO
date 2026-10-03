@@ -152,5 +152,155 @@
  * @property {string} [ctaAccent]
  */
 
+/**
+ * @typedef {Object} AboutIntro
+ * @property {string} heading
+ * @property {string} introduction
+ * @property {MediaAsset} portrait
+ * @property {CTAButton} primaryCTA
+ * @property {CTAButton} [secondaryCTA]
+ * @property {boolean} visible
+ */
+
+/**
+ * @typedef {Object} AboutChapter
+ * @property {string} id
+ * @property {string} chapterLabel
+ * @property {string} heading
+ * @property {string} body
+ * @property {MediaAsset} [image]
+ * @property {string} [date]
+ * @property {boolean} [dateVerified]
+ * @property {number} order
+ * @property {ContentStatus} status
+ * @property {boolean} visible
+ */
+
+/**
+ * @typedef {Object} JourneyMilestone
+ * @property {string} id
+ * @property {string} title
+ * @property {string} description
+ * @property {'speaking' | 'teaching' | 'mentorship' | 'coaching'} category
+ * @property {string} [date]
+ * @property {boolean} [dateVerified]
+ * @property {string} [proofUrl]
+ * @property {MediaAsset} [image]
+ * @property {number} order
+ * @property {ContentStatus} status
+ * @property {boolean} visible
+ */
+
+/**
+ * @typedef {Object} Philosophy
+ * @property {string} quote
+ * @property {string} explanation
+ * @property {CTAButton} primaryCTA
+ * @property {CTAButton} secondaryCTA
+ * @property {boolean} visible
+ */
+
+/**
+ * @typedef {Object} FinalBio
+ * @property {string} name
+ * @property {string} title
+ * @property {string} bio
+ * @property {CTAButton} primaryCTA
+ * @property {CTAButton} [secondaryCTA]
+ * @property {boolean} visible
+ */
+
+/**
+ * @typedef {Object} AboutPage
+ * @property {string} title
+ * @property {string} seoDescription
+ * @property {AboutIntro} intro
+ * @property {AboutChapter[]} chapters
+ * @property {JourneyMilestone[]} milestones
+ * @property {Philosophy} philosophy
+ * @property {FinalBio} finalBio
+ * @property {ContentStatus} status
+ */
+
+/**
+ * @typedef {Object} SpeakingTopic
+ * @property {string} id
+ * @property {string} title
+ * @property {'delivered' | 'developing'} status
+ * @property {string} summary
+ * @property {string} audience
+ * @property {string} approach
+ * @property {string} [proof]
+ * @property {MediaAsset} [image]
+ * @property {string} inquiryLabel
+ * @property {string} inquiryUrl
+ * @property {number} order
+ * @property {boolean} visible
+ */
+
+/**
+ * @typedef {Object} SpeakerOneSheet
+ * @property {string} url
+ * @property {string} buttonLabel
+ * @property {boolean} visible
+ */
+
+/**
+ * @typedef {Object} WorkshopOffering
+ * @property {string} id
+ * @property {string} title
+ * @property {'delivered' | 'proposed' | 'developing'} status
+ * @property {string} audience
+ * @property {string} description
+ * @property {string} [outcomes]
+ * @property {string} format
+ * @property {string} [duration]
+ * @property {MediaAsset} [image]
+ * @property {string} inquiryLabel
+ * @property {string} inquiryUrl
+ * @property {number} order
+ * @property {boolean} visible
+ */
+
+/**
+ * @typedef {Object} WorkshopEngagement
+ * @property {string} id
+ * @property {string} organization
+ * @property {string} eventName
+ * @property {string} title
+ * @property {string} audience
+ * @property {'delivered'} status
+ * @property {string} [date]
+ * @property {boolean} [dateVerified]
+ * @property {string} [description]
+ * @property {string} [proof]
+ * @property {MediaAsset} [image]
+ * @property {number} order
+ * @property {boolean} visible
+ */
+
+/**
+ * @typedef {Object} SpeakingWorkshopsPage
+ * @property {string} title
+ * @property {string} seoDescription
+ * @property {Object} intro
+ * @property {string} intro.heading
+ * @property {string} intro.speakingDescription
+ * @property {string} intro.workshopsDescription
+ * @property {MediaAsset} [intro.image]
+ * @property {CTAButton} intro.speakingCTA
+ * @property {CTAButton} intro.workshopsCTA
+ * @property {SpeakingTopic[]} topics
+ * @property {VideoContent[]} videos
+ * @property {MediaAsset[]} gallery
+ * @property {Credential[]} credentials
+ * @property {SpeakerOneSheet} oneSheet
+ * @property {WorkshopOffering[]} workshops
+ * @property {WorkshopEngagement[]} engagements
+ * @property {Testimonial[]} testimonials
+ * @property {ClosingInquiryContent} closingInquiry
+ * @property {ContentStatus} status
+ */
+
 // Export empty object so this file can be imported
 export {};

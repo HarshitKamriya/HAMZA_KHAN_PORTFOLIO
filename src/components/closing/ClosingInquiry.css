@@ -3,14 +3,16 @@
    ============================================================ */
 
 .closing {
-  padding: var(--spacing-5xl) 2rem;
+  padding: var(--spacing-5xl) 0;
   background-color: var(--color-background);
   text-align: center;
 }
 
 .closing__inner {
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,70 +44,12 @@
   flex-wrap: wrap;
 }
 
-.closing__cta-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 2.5rem;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  color: var(--color-foreground);
-  background: var(--color-primary);
-  border: none;
-  border-radius: var(--radius-full);
-  text-decoration: none;
-  transition: background-color var(--transition-fast),
-              transform var(--transition-fast),
-              box-shadow var(--transition-fast);
-}
-
-.closing__cta-primary:hover {
-  background: #7350ee;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(98, 60, 232, 0.4);
-}
-
-.closing__cta-primary:active {
-  transform: translateY(0);
-}
-
-.closing__cta-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 2.5rem;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  color: var(--color-foreground);
-  background: transparent;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
-  text-decoration: none;
-  transition: border-color var(--transition-fast),
-              background-color var(--transition-fast),
-              transform var(--transition-fast);
-}
-
-.closing__cta-secondary:hover {
-  border-color: var(--color-borderHover);
-  background-color: rgba(247, 245, 251, 0.04);
-  transform: translateY(-1px);
-}
-
-.closing__cta-secondary:active {
-  transform: translateY(0);
-}
-
 /* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 767px) {
   .closing {
-    padding: var(--spacing-4xl) 1.25rem;
+    padding: var(--spacing-4xl) 0;
   }
   
   .closing__actions {
@@ -114,8 +58,8 @@
     gap: 0.75rem;
   }
   
-  .closing__cta-primary,
-  .closing__cta-secondary {
+  .closing__actions .btn-primary,
+  .closing__actions .btn-secondary {
     width: 100%;
     justify-content: center;
   }

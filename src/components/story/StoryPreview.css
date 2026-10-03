@@ -8,8 +8,9 @@
 }
 
 .story-preview__inner {
-  max-width: 1440px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;

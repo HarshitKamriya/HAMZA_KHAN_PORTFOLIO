@@ -23,13 +23,13 @@ export default function ClosingInquiry({ content }) {
         
         <div className="closing__actions">
           {content.primaryCTA && (
-            <Link to={content.primaryCTA.url} className="closing__cta-primary">
+            <Link to={content.primaryCTA.url} className="btn-primary">
               {content.primaryCTA.label}
             </Link>
           )}
           
           {content.secondaryCTA && (
-            <Link to={content.secondaryCTA.url} className="closing__cta-secondary">
+            <Link to={content.secondaryCTA.url} className="btn-secondary">
               {content.secondaryCTA.label}
             </Link>
           )}

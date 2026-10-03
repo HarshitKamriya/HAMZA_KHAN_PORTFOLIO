@@ -1,0 +1,87 @@
+/* ============================================================
+   About Philosophy Section
+   ============================================================ */
+
+.philosophy {
+  padding: var(--spacing-6xl) 0;
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Atmospheric background treatment as requested */
+.philosophy::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vw;
+  background: radial-gradient(circle, rgba(98, 60, 232, 0.05) 0%, transparent 60%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.philosophy__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 900px; /* Custom reading width is fine here, but use container-padding */
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.philosophy__quote {
+  font-family: var(--font-display);
+  font-size: var(--text-display-xl);
+  font-weight: var(--text-display-xl-weight);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-foreground);
+  margin-bottom: 3rem;
+}
+
+.philosophy__explanation {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  color: var(--color-muted);
+  max-width: 60ch;
+  margin-bottom: 4rem;
+}
+
+.philosophy__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 767px) {
+  .philosophy {
+    padding: var(--spacing-5xl) 0;
+  }
+  
+  .philosophy__quote {
+    font-size: var(--text-display-md);
+  }
+  
+  .philosophy__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .philosophy__actions .btn-primary,
+  .philosophy__actions .btn-secondary {
+    width: 100%;
+  }
+}

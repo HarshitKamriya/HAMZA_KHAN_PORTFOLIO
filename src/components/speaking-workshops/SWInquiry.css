@@ -1,0 +1,62 @@
+/* ============================================================
+   Speaking & Workshops Final Inquiry
+   ============================================================ */
+
+.sw-inquiry {
+  padding: var(--spacing-6xl) 0;
+  background-color: var(--color-background);
+  text-align: center;
+}
+
+.sw-inquiry__inner {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.sw-inquiry__heading {
+  font-family: var(--font-display);
+  font-size: var(--text-display-md);
+  font-weight: var(--text-display-md-weight);
+  color: var(--color-foreground);
+  margin-bottom: 1.5rem;
+}
+
+.sw-inquiry__body {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  color: var(--color-muted);
+  margin-bottom: 3rem;
+}
+
+.sw-inquiry__actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 767px) {
+  .sw-inquiry {
+    padding: var(--spacing-5xl) 0;
+  }
+  
+  .sw-inquiry__heading {
+    font-size: var(--text-heading-xl);
+  }
+  
+  .sw-inquiry__actions {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .sw-inquiry__actions .btn-primary,
+  .sw-inquiry__actions .btn-secondary {
+    width: 100%;
+  }
+}

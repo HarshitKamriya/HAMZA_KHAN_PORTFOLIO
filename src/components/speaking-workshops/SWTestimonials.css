@@ -1,0 +1,69 @@
+/* ============================================================
+   Speaking & Workshops Testimonials
+   ============================================================ */
+
+.sw-testimonials {
+  padding: var(--spacing-6xl) 0;
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sw-testimonials__inner {
+  width: 100%;
+  max-width: var(--container-content);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.sw-testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.sw-testimonial__quote {
+  font-family: var(--font-display);
+  font-size: var(--text-heading-2xl);
+  font-weight: var(--text-heading-2xl-weight);
+  color: var(--color-foreground);
+  line-height: 1.2;
+}
+
+.sw-testimonial__attr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.sw-testimonial__name {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  font-weight: 600;
+  color: var(--color-foreground);
+}
+
+.sw-testimonial__role {
+  font-family: var(--font-body);
+  font-size: var(--text-body-md);
+  color: var(--color-muted);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 767px) {
+  .sw-testimonials {
+    padding: var(--spacing-4xl) 0;
+  }
+  
+  .sw-testimonial__quote {
+    font-size: var(--text-heading-xl);
+  }
+}

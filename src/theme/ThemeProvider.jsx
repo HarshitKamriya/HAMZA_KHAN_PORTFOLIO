@@ -1,5 +1,5 @@
 import { createContext, useContext, useMemo } from 'react';
-import { defaultColors, typography, typeScale, transitions, radii } from './tokens';
+import { defaultColors, typography, typeScale, spacing, transitions, radii } from './tokens';
 
 const ThemeContext = createContext(null);
 
@@ -27,6 +27,7 @@ export function ThemeProvider({ themeSettings = {}, children }) {
     colors,
     typography,
     typeScale,
+    spacing,
     transitions,
     radii,
   }), [colors]);
@@ -48,6 +49,10 @@ export function ThemeProvider({ themeSettings = {}, children }) {
       vars[`--text-${key}-lh`] = String(value.desktop.lineHeight);
       vars[`--text-${key}-ls`] = value.desktop.letterSpacing;
     });
+    // Spacing
+    Object.entries(spacing).forEach(([key, value]) => {
+      vars[`--spacing-${key}`] = value;
+    });
     // Transitions
     Object.entries(transitions).forEach(([key, value]) => {
       vars[`--transition-${key}`] = value;
@@ -56,6 +61,11 @@ export function ThemeProvider({ themeSettings = {}, children }) {
     Object.entries(radii).forEach(([key, value]) => {
       vars[`--radius-${key}`] = value;
     });
+    // Layout boundaries
+    vars['--container-max'] = '1440px';
+    vars['--container-content'] = '1000px';
+    vars['--container-narrow'] = '800px';
+    vars['--container-padding'] = 'clamp(1.25rem, 5vw, 2rem)';
     return vars;
   }, [colors]);
 

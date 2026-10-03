@@ -1,0 +1,169 @@
+/* ============================================================
+   Speaking Topics Section
+   ============================================================ */
+
+.speaking-topics {
+  padding: var(--spacing-5xl) 0;
+  background-color: var(--color-surface);
+}
+
+.speaking-topics__header {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.speaking-topics__label {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: var(--text-label-weight);
+  letter-spacing: var(--text-label-ls);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.speaking-topics__title {
+  font-family: var(--font-display);
+  font-size: var(--text-display-md);
+  color: var(--color-foreground);
+}
+
+.speaking-topics__list {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+/* Individual Topic Layout */
+.topic-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.topic-card--text-only {
+  grid-template-columns: 1fr;
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+}
+
+/* Alternating layout for rhythm */
+.topic-card--even .topic-card__media {
+  order: -1;
+}
+
+.topic-card__status {
+  display: inline-flex;
+  padding: 0.25rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-foreground);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+}
+
+.topic-card__status--delivered {
+  background: rgba(98, 60, 232, 0.2);
+  color: #a890f5;
+}
+
+.topic-card__status--developing {
+  background: rgba(255, 165, 0, 0.1);
+  color: #ffb732;
+}
+
+.topic-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-heading-2xl);
+  font-weight: var(--text-heading-2xl-weight);
+  color: var(--color-foreground);
+  margin-bottom: 1.5rem;
+}
+
+.topic-card__summary {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  color: var(--color-muted);
+  margin-bottom: 2rem;
+}
+
+.topic-card__details {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--color-border);
+}
+
+.topic-card__detail-label {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.topic-card__detail-text {
+  font-family: var(--font-body);
+  font-size: var(--text-body-md);
+  color: var(--color-muted);
+}
+
+.topic-card__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.topic-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1023px) {
+  .topic-card {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .topic-card--even .topic-card__media {
+    order: unset;
+  }
+}
+
+@media (max-width: 767px) {
+  .speaking-topics {
+    padding: var(--spacing-4xl) 0;
+  }
+  
+  .speaking-topics__list {
+    gap: 4rem;
+  }
+  
+  .topic-card__title {
+    font-size: var(--text-heading-xl);
+  }
+}
