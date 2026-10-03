@@ -1,0 +1,107 @@
+/* ============================================================
+   Coaching Challenges
+   ============================================================ */
+
+.coaching-challenges {
+  padding: var(--spacing-4xl) 0;
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.coaching-challenges__inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+}
+
+.coaching-challenges__header {
+  position: sticky;
+  top: 120px;
+  align-self: start;
+}
+
+.coaching-challenges__title {
+  font-family: var(--font-display);
+  font-size: var(--text-heading-lg);
+  font-weight: var(--text-heading-lg-weight);
+  color: var(--color-foreground);
+  margin-bottom: 1rem;
+}
+
+.coaching-challenges__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  color: var(--color-muted);
+}
+
+.coaching-challenges__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Challenge Item */
+.challenge-item {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-base),
+              border-color var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+.challenge-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-borderHover);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.challenge-item__number {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  opacity: 0.5;
+  margin-bottom: 1rem;
+}
+
+.challenge-item__title {
+  font-family: var(--font-display);
+  font-size: var(--text-heading-md);
+  color: var(--color-foreground);
+  margin-bottom: 0.75rem;
+}
+
+.challenge-item__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-body-md);
+  color: var(--color-muted);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1023px) {
+  .coaching-challenges__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .coaching-challenges__header {
+    position: static;
+  }
+}
+
+@media (max-width: 767px) {
+  .coaching-challenges__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .challenge-item {
+    padding: 2rem;
+  }
+}

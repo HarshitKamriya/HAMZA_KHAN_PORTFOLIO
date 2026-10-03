@@ -5,6 +5,7 @@ import SiteLayout from './components/layout/SiteLayout';
 import Home from './pages/Home';
 import About from './pages/About';
 import SpeakingWorkshops from './pages/SpeakingWorkshops';
+import Coaching from './pages/Coaching';
 import Placeholder from './pages/Placeholder';
 import './index.css';
 
@@ -20,7 +21,7 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/speaking-workshops" element={<SpeakingWorkshops />} />
-            <Route path="/coaching" element={<Placeholder title="Coaching" />} />
+            <Route path="/coaching" element={<Coaching />} />
             <Route path="/contact" element={<Placeholder title="Contact" />} />
           </Route>
         </Routes>

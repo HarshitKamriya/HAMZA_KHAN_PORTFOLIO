@@ -96,3 +96,15 @@ export async function getMediaAsset(id) {
     return null;
   }
 }
+
+/**
+ * Fetch coaching page content
+ * @returns {Promise<import('./types').CoachingPage>}
+ */
+export async function getCoachingPage() {
+  const response = await fetch('/content/coaching.json');
+  if (!response.ok) {
+    throw new Error(`Failed to fetch coaching content: ${response.status}`);
+  }
+  return response.json();
+}

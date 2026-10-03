@@ -1,0 +1,110 @@
+/* ============================================================
+   Coaching Process
+   ============================================================ */
+
+.coaching-process {
+  padding: var(--spacing-5xl) 0;
+  background-color: var(--color-surface);
+}
+
+.coaching-process__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coaching-process__header {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.coaching-process__title {
+  font-family: var(--font-display);
+  font-size: var(--text-display-md);
+  color: var(--color-foreground);
+}
+
+.coaching-process__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 600px;
+  width: 100%;
+}
+
+.process-step {
+  display: flex;
+  gap: 2rem;
+}
+
+.process-step__indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.process-step__number {
+  font-family: var(--font-display);
+  font-size: var(--text-heading-md);
+  color: var(--color-primary);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(98, 60, 232, 0.1);
+  flex-shrink: 0;
+}
+
+.process-step__line {
+  width: 2px;
+  flex-grow: 1;
+  background-color: var(--color-borderHover);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  min-height: 4rem;
+}
+
+.process-step__content {
+  padding-bottom: 4rem;
+  padding-top: 0.5rem; /* alignment with number center */
+}
+
+.process-step:last-child .process-step__content {
+  padding-bottom: 0;
+}
+
+.process-step__title {
+  font-family: var(--font-display);
+  font-size: var(--text-heading-md);
+  color: var(--color-foreground);
+  margin-bottom: 1rem;
+}
+
+.process-step__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  color: var(--color-muted);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 767px) {
+  .coaching-process {
+    padding: var(--spacing-4xl) 0;
+  }
+  
+  .process-step {
+    gap: 1.5rem;
+  }
+  
+  .process-step__title {
+    font-size: var(--text-heading-sm);
+  }
+  
+  .process-step__desc {
+    font-size: var(--text-body-md);
+  }
+}

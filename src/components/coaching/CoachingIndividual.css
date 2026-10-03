@@ -1,0 +1,153 @@
+/* ============================================================
+   Coaching Individual Offer
+   ============================================================ */
+
+.coaching-individual {
+  padding: var(--spacing-5xl) 0;
+  background-color: var(--color-background);
+}
+
+.coaching-individual__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--color-surface);
+  padding: 4rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+}
+
+.coaching-individual__status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+}
+
+.coaching-individual__status--current {
+  background-color: rgba(98, 60, 232, 0.15);
+  color: var(--color-primary);
+}
+
+.coaching-individual__status--developing {
+  background-color: rgba(247, 245, 251, 0.1);
+  color: var(--color-muted);
+}
+
+.coaching-individual__title {
+  font-family: var(--font-display);
+  font-size: var(--text-display-md);
+  color: var(--color-foreground);
+  margin-bottom: 1.5rem;
+}
+
+.coaching-individual__desc {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  color: var(--color-muted);
+  margin-bottom: 3rem;
+  max-width: 60ch;
+}
+
+.coaching-individual__details {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--color-border);
+  width: 100%;
+}
+
+.coaching-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.coaching-detail__label {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: var(--text-label-weight);
+  letter-spacing: var(--text-label-ls);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.coaching-detail__text {
+  font-family: var(--font-body);
+  font-size: var(--text-body-md);
+  font-weight: 600;
+  color: var(--color-foreground);
+}
+
+.coaching-individual__inclusions {
+  margin-bottom: 3rem;
+}
+
+.coaching-inclusions__title {
+  font-family: var(--font-display);
+  font-size: var(--text-heading-sm);
+  color: var(--color-foreground);
+  margin-bottom: 1.5rem;
+}
+
+.coaching-inclusions__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.coaching-inclusions__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-body);
+  font-size: var(--text-body-md);
+  color: var(--color-muted);
+}
+
+.coaching-inclusions__item svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.coaching-individual__price-alert {
+  background-color: rgba(98, 60, 232, 0.1);
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  margin-bottom: 2rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--color-foreground);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 767px) {
+  .coaching-individual {
+    padding: var(--spacing-4xl) 0;
+  }
+  
+  .coaching-individual__inner {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .coaching-individual__details {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .coaching-individual__cta {
+    width: 100%;
+  }
+}
