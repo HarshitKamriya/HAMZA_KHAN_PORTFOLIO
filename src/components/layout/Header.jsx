@@ -24,10 +24,12 @@ export default function Header({ siteSettings }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile nav on route change
-  useEffect(() => {
+  // Close mobile nav when route changes (render-phase state adjustment per React docs)
+  const [prevPath, setPrevPath] = useState(location.pathname);
+  if (prevPath !== location.pathname) {
+    setPrevPath(location.pathname);
     setIsMobileOpen(false);
-  }, [location.pathname]);
+  }
 
   // Lock body scroll when mobile nav is open
   useEffect(() => {

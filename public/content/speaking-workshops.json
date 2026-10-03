@@ -42,6 +42,13 @@
       "summary": "How to deliver a concise, compelling introduction that captures attention immediately.",
       "audience": "Entrepreneurs, job seekers, and sales professionals.",
       "approach": "Breaks down the anatomy of a successful pitch: What, How, Proof, and Result, focusing on clarity and relevance over buzzwords.",
+      "image": {
+        "id": "topic-pitch",
+        "url": "/media/gallery-2.jpg",
+        "alt": "Hamza Khan delivering an impactful talk with microphone",
+        "focalPoint": { "x": 0.5, "y": 0.5 },
+        "status": "published"
+      },
       "inquiryLabel": "Inquire About Speaking",
       "inquiryUrl": "/contact?type=speaking",
       "order": 2,
@@ -54,6 +61,13 @@
       "summary": "An emerging framework for distilling complicated information into understandable, actionable insights.",
       "audience": "Technical experts, subject matter experts, and academic presenters.",
       "approach": "Currently in development, this topic explores methods for simplifying complex data without losing nuance.",
+      "image": {
+        "id": "topic-clear",
+        "url": "/media/gallery-1.jpg",
+        "alt": "Hamza Khan commanding the room and engaging an audience",
+        "focalPoint": { "x": 0.5, "y": 0.5 },
+        "status": "published"
+      },
       "inquiryLabel": "Inquire About Speaking",
       "inquiryUrl": "/contact?type=speaking",
       "order": 3,
@@ -64,16 +78,16 @@
   "gallery": [
     {
       "id": "gallery-1",
-      "url": "/media/gallery-1.jpg",
-      "alt": "Speaker on stage looking at audience",
+      "url": "/media/hero-stage.png",
+      "alt": "Hamza Khan delivering keynote address on main stage",
       "focalPoint": { "x": 0.5, "y": 0.5 },
       "order": 1,
       "status": "published"
     },
     {
       "id": "gallery-2",
-      "url": "/media/gallery-2.jpg",
-      "alt": "Close-up side profile of speaker holding microphone",
+      "url": "/media/video-poster.jpg",
+      "alt": "Hamza Khan facilitating an interactive masterclass",
       "focalPoint": { "x": 0.5, "y": 0.5 },
       "order": 2,
       "status": "published"

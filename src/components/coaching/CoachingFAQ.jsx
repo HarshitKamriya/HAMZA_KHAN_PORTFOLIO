@@ -7,6 +7,8 @@ import './CoachingFAQ.css';
  * @param {{ faqs: import('../../cms/types').FAQ[] }} props
  */
 export default function CoachingFAQ({ faqs }) {
+  const [openIndex, setOpenIndex] = useState(0); // Open first FAQ by default
+
   if (!faqs || faqs.length === 0) return null;
 
   const validFaqs = faqs
@@ -14,8 +16,6 @@ export default function CoachingFAQ({ faqs }) {
     .sort((a, b) => a.order - b.order);
 
   if (validFaqs.length === 0) return null;
-
-  const [openIndex, setOpenIndex] = useState(0); // Open first FAQ by default
 
   const toggleFaq = (index) => {
     setOpenIndex(prev => (prev === index ? -1 : index));

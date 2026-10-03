@@ -19,21 +19,27 @@ export default function SWTestimonials({ testimonials }) {
   return (
     <section className="sw-testimonials" aria-labelledby="feedback-heading">
       <div className="sw-testimonials__inner">
-        <h2 id="feedback-heading" className="sr-only">Feedback</h2>
+        <header className="sw-testimonials__header">
+          <span className="sw-testimonials__label">Client Feedback</span>
+          <h2 id="feedback-heading" className="sw-testimonials__title">Impact & Endorsements</h2>
+        </header>
 
-        {validTestimonials.map((testimonial) => (
-          <blockquote key={testimonial.id} className="sw-testimonial">
-            <p className="sw-testimonial__quote">"{testimonial.quote}"</p>
-            <footer className="sw-testimonial__attr">
-              <span className="sw-testimonial__name">{testimonial.displayName}</span>
-              <span className="sw-testimonial__role">
-                {testimonial.role}
-                {testimonial.role && testimonial.company && ', '}
-                {testimonial.company}
-              </span>
-            </footer>
-          </blockquote>
-        ))}
+        <div className="sw-testimonials__list">
+          {validTestimonials.map((testimonial) => (
+            <blockquote key={testimonial.id} className="sw-testimonial">
+              <span className="sw-testimonial__quote-mark" aria-hidden="true">“</span>
+              <p className="sw-testimonial__quote">{testimonial.quote}</p>
+              <footer className="sw-testimonial__attr">
+                <span className="sw-testimonial__name">{testimonial.displayName}</span>
+                <span className="sw-testimonial__role">
+                  {testimonial.role}
+                  {testimonial.role && testimonial.company && ', '}
+                  {testimonial.company}
+                </span>
+              </footer>
+            </blockquote>
+          ))}
+        </div>
       </div>
     </section>
   );

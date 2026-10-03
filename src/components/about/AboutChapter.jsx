@@ -11,7 +11,11 @@ import './AboutChapter.css';
 export default function AboutChapter({ chapter, index }) {
   if (!chapter || !chapter.visible || chapter.status !== 'published') return null;
 
-  const hasImage = chapter.image && chapter.image.status === 'published';
+  const imageUrl = typeof chapter.image === 'string' ? chapter.image : chapter.image?.url;
+  const imageAlt = typeof chapter.image === 'object' ? (chapter.image?.alt || '') : '';
+  const isDraft = typeof chapter.image === 'object' && chapter.image?.status === 'draft';
+  const hasImage = Boolean(imageUrl) && !isDraft;
+
   const isEven = index % 2 !== 0; // 0-indexed, so 1, 3, etc are 'even' visually
   
   // Alternate background colors for visual separation
@@ -57,8 +61,8 @@ export default function AboutChapter({ chapter, index }) {
         {hasImage && (
           <div className="about-chapter__media">
             <img 
-              src={chapter.image.url} 
-              alt={chapter.image.alt || ''}
+              src={imageUrl} 
+              alt={imageAlt}
               className="about-chapter__image"
               style={{ objectPosition }}
               loading="lazy"

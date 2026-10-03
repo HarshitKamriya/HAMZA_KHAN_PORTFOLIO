@@ -33,11 +33,11 @@ export default function CoachingIntro({ content }) {
         </div>
 
         {/* If no image provided, we can rely on a typography-led design which just centers or expands content */}
-        {content.image && (
+        {Boolean(typeof content.image === 'string' ? content.image : content.image?.url) && content.image?.status !== 'draft' && (
           <div className="coaching-intro__media">
             <img 
-              src={content.image} 
-              alt={content.imageAlt || ''}
+              src={typeof content.image === 'string' ? content.image : content.image?.url} 
+              alt={typeof content.image === 'object' ? (content.image?.alt || content.imageAlt || '') : (content.imageAlt || '')}
               className="coaching-intro__image"
               loading="eager"
             />

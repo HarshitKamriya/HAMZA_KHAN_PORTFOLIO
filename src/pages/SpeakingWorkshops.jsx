@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useSpeakingWorkshopsPage } from '../cms/hooks';
 import SWIntro from '../components/speaking-workshops/SWIntro';
 import SpeakingTopics from '../components/speaking-workshops/SpeakingTopics';
@@ -8,6 +7,7 @@ import WorkshopsOffering from '../components/speaking-workshops/WorkshopsOfferin
 import WorkshopEngagements from '../components/speaking-workshops/WorkshopEngagements';
 import SWTestimonials from '../components/speaking-workshops/SWTestimonials';
 import SWInquiry from '../components/speaking-workshops/SWInquiry';
+import SEO from '../components/common/SEO';
 
 /**
  * Speaking & Workshops Page
@@ -16,12 +16,6 @@ import SWInquiry from '../components/speaking-workshops/SWInquiry';
  */
 export default function SpeakingWorkshops() {
   const { data, loading, error } = useSpeakingWorkshopsPage();
-
-  useEffect(() => {
-    if (data?.title) {
-      document.title = `${data.title} | Hamza Khan`;
-    }
-  }, [data]);
 
   if (error) {
     console.error('Failed to load speaking-workshops page content:', error);
@@ -38,7 +32,14 @@ export default function SpeakingWorkshops() {
   }
 
   return (
-    <article className="speaking-workshops-page">
+    <>
+      <SEO
+        title={data?.title || 'Speaking & Workshops'}
+        description={data?.seoDescription || data?.intro?.speakingDescription}
+        canonicalPath="/speaking-workshops"
+        ogImage="/media/topic-move.jpg"
+      />
+      <article className="speaking-workshops-page">
       {/* Section 1: Intro */}
       <SWIntro content={data.intro} />
 
@@ -63,5 +64,6 @@ export default function SpeakingWorkshops() {
       {/* Section 8: Final Inquiry CTA */}
       <SWInquiry content={data.closingInquiry} />
     </article>
+  </>
   );
 }

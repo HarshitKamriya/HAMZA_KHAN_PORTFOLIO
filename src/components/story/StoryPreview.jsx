@@ -12,6 +12,11 @@ import './StoryPreview.css';
 export default function StoryPreview({ content }) {
   if (!content || !content.visible) return null;
 
+  const imageUrl = typeof content.image === 'string' ? content.image : content.image?.url;
+  const imageAlt = typeof content.image === 'object' ? (content.image?.alt || '') : '';
+  const isDraft = typeof content.image === 'object' && content.image?.status === 'draft';
+  const showImage = Boolean(imageUrl) && !isDraft;
+
   // Compute focal point if available
   const focalX = content.image?.focalPoint?.x ?? 0.5;
   const focalY = content.image?.focalPoint?.y ?? 0.5;
@@ -22,11 +27,11 @@ export default function StoryPreview({ content }) {
       <div className="story-preview__inner">
         
         {/* Media Side */}
-        {content.image && content.image.status === 'published' && (
+        {showImage && (
           <div className="story-preview__media">
             <img
-              src={content.image.url}
-              alt={content.image.alt || ''}
+              src={imageUrl}
+              alt={imageAlt}
               className="story-preview__image"
               style={{ objectPosition }}
               loading="lazy"

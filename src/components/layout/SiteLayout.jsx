@@ -1,8 +1,9 @@
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
+import Footer from './Footer';
 
 /**
- * SiteLayout — Wraps all pages with header and eventual footer.
+ * SiteLayout — Wraps all pages with header and footer.
  * 
  * Props:
  *  - siteSettings: CMS site settings
@@ -17,7 +18,7 @@ export default function SiteLayout({ siteSettings }) {
       <main id="main-content" role="main">
         <Outlet />
       </main>
-      {/* Footer placeholder — to be implemented in a later phase */}
+      <Footer siteSettings={siteSettings} />
     </>
   );
 }

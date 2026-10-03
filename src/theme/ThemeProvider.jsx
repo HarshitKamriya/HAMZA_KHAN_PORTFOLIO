@@ -1,7 +1,6 @@
-import { createContext, useContext, useMemo } from 'react';
+import { useMemo } from 'react';
 import { defaultColors, typography, typeScale, spacing, transitions, radii } from './tokens';
-
-const ThemeContext = createContext(null);
+import { ThemeContext } from './useTheme';
 
 /**
  * ThemeProvider
@@ -78,10 +77,3 @@ export function ThemeProvider({ themeSettings = {}, children }) {
   );
 }
 
-export function useTheme() {
-  const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider');
-  }
-  return context;
-}

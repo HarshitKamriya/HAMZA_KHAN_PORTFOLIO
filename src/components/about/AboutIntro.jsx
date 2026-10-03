@@ -11,6 +11,11 @@ import './AboutIntro.css';
 export default function AboutIntro({ content }) {
   if (!content || !content.visible) return null;
 
+  const portraitUrl = typeof content.portrait === 'string' ? content.portrait : content.portrait?.url;
+  const portraitAlt = typeof content.portrait === 'object' ? (content.portrait?.alt || '') : '';
+  const isDraft = typeof content.portrait === 'object' && content.portrait?.status === 'draft';
+  const showPortrait = Boolean(portraitUrl) && !isDraft;
+
   const focalX = content.portrait?.focalPoint?.x ?? 0.5;
   const focalY = content.portrait?.focalPoint?.y ?? 0.5;
   const objectPosition = `${focalX * 100}% ${focalY * 100}%`;
@@ -41,11 +46,11 @@ export default function AboutIntro({ content }) {
           </div>
         </div>
 
-        {content.portrait && content.portrait.status === 'published' && (
+        {showPortrait && (
           <div className="about-intro__media">
             <img 
-              src={content.portrait.url} 
-              alt={content.portrait.alt || ''}
+              src={portraitUrl} 
+              alt={portraitAlt}
               className="about-intro__image"
               style={{ objectPosition }}
               loading="eager" // LCP element

@@ -1,10 +1,11 @@
 /* ============================================================
-   Speaking Topics Section
+   Speaking Topics Section - Premium Editorial Layout
    ============================================================ */
 
 .speaking-topics {
   padding: var(--spacing-5xl) 0;
-  background-color: var(--color-surface);
+  background-color: var(--color-background);
+  position: relative;
 }
 
 .speaking-topics__header {
@@ -24,13 +25,23 @@
   color: var(--color-primary);
   text-transform: uppercase;
   margin-bottom: 1rem;
-  display: block;
+  display: inline-block;
 }
 
 .speaking-topics__title {
   font-family: var(--font-display);
   font-size: var(--text-display-md);
   color: var(--color-foreground);
+  margin-bottom: 1rem;
+}
+
+.speaking-topics__subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  color: var(--color-muted);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 .speaking-topics__list {
@@ -40,130 +51,226 @@
   padding-inline: var(--container-padding);
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 3.5rem;
 }
 
-/* Individual Topic Layout */
+/* Individual Topic Card */
 .topic-card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
   align-items: center;
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-xl, 20px);
+  padding: 3rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+  transition: transform var(--transition-base, 0.3s ease), 
+              border-color var(--transition-base, 0.3s ease), 
+              box-shadow var(--transition-base, 0.3s ease);
 }
 
-.topic-card--text-only {
-  grid-template-columns: 1fr;
-  max-width: var(--container-narrow);
-  margin: 0 auto;
+.topic-card:hover {
+  border-color: rgba(98, 60, 232, 0.35);
+  box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.6), 0 0 25px rgba(98, 60, 232, 0.1);
 }
 
-/* Alternating layout for rhythm */
+/* Alternating layout: even cards have media on the left */
+.topic-card--even {
+  grid-template-columns: 0.85fr 1.15fr;
+}
+
 .topic-card--even .topic-card__media {
   order: -1;
 }
 
+/* Fallback for text-only card */
+.topic-card--text-only {
+  grid-template-columns: 1fr;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Card Header (Status + Index) */
+.topic-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
 .topic-card__status {
   display: inline-flex;
-  padding: 0.25rem 0.75rem;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
   font-family: var(--font-body);
-  font-size: 0.6875rem;
+  font-size: 0.72rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-foreground);
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-sm);
-  margin-bottom: 1rem;
+  letter-spacing: 0.06em;
+  border-radius: var(--radius-full, 9999px);
 }
 
 .topic-card__status--delivered {
-  background: rgba(98, 60, 232, 0.2);
-  color: #a890f5;
+  background: rgba(98, 60, 232, 0.15);
+  color: #c4b5fd;
+  border: 1px solid rgba(167, 139, 250, 0.3);
 }
 
 .topic-card__status--developing {
-  background: rgba(255, 165, 0, 0.1);
-  color: #ffb732;
+  background: rgba(245, 158, 11, 0.15);
+  color: #fde68a;
+  border: 1px solid rgba(245, 158, 11, 0.3);
 }
 
+.topic-card__index {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-muted);
+  opacity: 0.4;
+  letter-spacing: 0.05em;
+}
+
+/* Typography */
 .topic-card__title {
   font-family: var(--font-display);
-  font-size: var(--text-heading-2xl);
-  font-weight: var(--text-heading-2xl-weight);
+  font-size: var(--text-heading-xl, 1.85rem);
+  font-weight: var(--text-heading-2xl-weight, 700);
   color: var(--color-foreground);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.25;
 }
 
 .topic-card__summary {
   font-family: var(--font-body);
-  font-size: var(--text-body-lg);
+  font-size: 1.05rem;
+  line-height: 1.65;
   color: var(--color-muted);
   margin-bottom: 2rem;
 }
 
+/* Details Box */
 .topic-card__details {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-  margin-bottom: 3rem;
-  padding-left: 1.5rem;
-  border-left: 2px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md, 12px);
+  padding: 1.5rem;
+  margin-bottom: 2.25rem;
+}
+
+.topic-card__detail {
+  display: flex;
+  flex-direction: column;
 }
 
 .topic-card__detail-label {
   font-family: var(--font-body);
-  font-size: var(--text-label);
+  font-size: 0.72rem;
   font-weight: 600;
   color: var(--color-primary);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.5rem;
-  display: block;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
 }
 
 .topic-card__detail-text {
   font-family: var(--font-body);
-  font-size: var(--text-body-md);
-  color: var(--color-muted);
+  font-size: 0.925rem;
+  color: var(--color-foreground);
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.9;
 }
 
+/* Actions */
+.topic-card__actions {
+  display: flex;
+  align-items: center;
+}
+
+.topic-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+/* Media Box */
 .topic-card__media {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  border-radius: var(--radius-lg);
+  aspect-ratio: 16 / 11;
+  border-radius: var(--radius-lg, 16px);
   overflow: hidden;
+  box-shadow: 0 15px 35px -8px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-surface-sunken, #0d0f14);
 }
 
 .topic-card__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow, 0.5s ease);
+}
+
+.topic-card:hover .topic-card__image {
+  transform: scale(1.04);
+}
+
+.topic-card__media-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.45) 100%);
 }
 
 /* ============================================================
-   RESPONSIVE
+   RESPONSIVE DESIGN
    ============================================================ */
-@media (max-width: 1023px) {
-  .topic-card {
+@media (max-width: 1024px) {
+  .topic-card,
+  .topic-card--even {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
+    padding: 2.5rem;
   }
   
   .topic-card--even .topic-card__media {
     order: unset;
   }
+  
+  .topic-card__media {
+    aspect-ratio: 16 / 9;
+  }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 640px) {
   .speaking-topics {
     padding: var(--spacing-4xl) 0;
   }
   
   .speaking-topics__list {
-    gap: 4rem;
+    gap: 2.5rem;
+  }
+  
+  .topic-card {
+    padding: 1.75rem;
+  }
+  
+  .topic-card__details {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.25rem;
   }
   
   .topic-card__title {
-    font-size: var(--text-heading-xl);
+    font-size: 1.5rem;
   }
 }

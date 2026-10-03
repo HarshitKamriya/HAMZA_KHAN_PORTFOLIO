@@ -13,16 +13,19 @@
       "url": "/coaching"
     },
     "image": {
-      "id": "hero-stage-worlddef",
-      "url": "/media/hero-stage.png",
-      "type": "image",
-      "alt": "Hamza Khan speaking on stage at WorldDEF",
       "caption": "Hamza Khan presenting at WorldDEF",
-      "credit": "",
-      "rights": "",
-      "focalPoint": { "x": 0.5, "y": 0.35 },
+      "alt": "Hamza Khan speaking on stage at WorldDEF",
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.35
+      },
       "order": 1,
-      "status": "published"
+      "url": "/media/hero-stage.png",
+      "status": "published",
+      "rights": "",
+      "credit": "",
+      "type": "image",
+      "id": "hero-stage-worlddef"
     }
   },
   "credentials": [
@@ -47,13 +50,6 @@
       "verificationStatus": "approved",
       "order": 3,
       "visible": true
-    },
-    {
-      "id": "cred-pending-claim",
-      "label": "Global Champion",
-      "verificationStatus": "pending",
-      "order": 4,
-      "visible": true
     }
   ],
   "featuredVideo": {
@@ -70,7 +66,7 @@
       "status": "published"
     },
     "fallbackUrl": "/contact?type=speaking",
-    "status": "published"
+    "status": "pending"
   },
   "services": [
     {
@@ -118,27 +114,27 @@
   },
   "featuredTestimonials": [
     {
-      "id": "test-1",
-      "quote": "Hamza completely transformed the way our leadership team approaches high-stakes presentations. His framework is brilliant.",
-      "category": "speaking",
-      "displayName": "Sarah J.",
-      "role": "VP of Communications",
-      "company": "Tech Innovators",
       "permissionStatus": "approved",
+      "displayName": "Sarah J.",
       "featured": true,
       "order": 1,
-      "status": "published"
+      "status": "published",
+      "role": "VP of Communications",
+      "id": "test-1",
+      "quote": "Hamza completely transformed the way our leadership team approaches high-stakes presentations. His framework is brilliant.",
+      "company": "Tech Innovators",
+      "category": "speaking"
     },
     {
-      "id": "test-2",
-      "quote": "Working 1-on-1 with Hamza gave me the confidence to deliver the most important pitch of my career. Highly recommended.",
-      "category": "coaching",
-      "displayName": "Michael T.",
-      "role": "Startup Founder",
       "permissionStatus": "approved",
+      "displayName": "Michael T.",
       "featured": true,
       "order": 2,
-      "status": "published"
+      "status": "published",
+      "role": "Startup Founder",
+      "id": "test-2",
+      "quote": "Working 1-on-1 with Hamza gave me the confidence to deliver the most important pitch of my career. Highly recommended.",
+      "category": "coaching"
     }
   ],
   "closingInquiry": {

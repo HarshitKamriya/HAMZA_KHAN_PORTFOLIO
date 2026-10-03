@@ -53,6 +53,11 @@ export const typeScale = {
     mobile:  { size: '1.75rem', lineHeight: 1.2, weight: 700, letterSpacing: '-0.015em' },
     clamp: 'clamp(1.75rem, 3vw + 0.5rem, 2.5rem)',
   },
+  'heading-2xl': {
+    desktop: { size: '2.25rem', lineHeight: 1.2, weight: 700, letterSpacing: '-0.02em' },
+    mobile:  { size: '1.625rem', lineHeight: 1.25, weight: 700, letterSpacing: '-0.015em' },
+    clamp: 'clamp(1.625rem, 2.5vw + 0.5rem, 2.25rem)',
+  },
   'heading-lg': {
     desktop: { size: '1.75rem', lineHeight: 1.25, weight: 600, letterSpacing: '-0.015em' },
     mobile:  { size: '1.375rem', lineHeight: 1.3, weight: 600, letterSpacing: '-0.01em' },
@@ -95,6 +100,7 @@ export const spacing = {
   '3xl': '4rem',
   '4xl': '6rem',
   '5xl': '8rem',
+  '6xl': '9rem',
 };
 
 export const breakpoints = {

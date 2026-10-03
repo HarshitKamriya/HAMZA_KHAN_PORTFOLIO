@@ -18,19 +18,26 @@ export default function WorkshopEngagements({ engagements }) {
     <section className="workshop-engagements" aria-labelledby="engagements-heading">
       <div className="workshop-engagements__inner">
         <header className="workshop-engagements__header">
-          <h2 id="engagements-heading" className="workshop-engagements__title">Selected Engagements</h2>
+          <span className="workshop-engagements__label">Past Engagements</span>
+          <h2 id="engagements-heading" className="workshop-engagements__title">Selected Client Workshops</h2>
+          <p className="workshop-engagements__subtitle">
+            A track record of facilitating focused, practical communication sessions for teams, founders, and professionals.
+          </p>
         </header>
 
         <div className="engagements-grid">
           {validEngagements.map((engagement) => (
             <article key={engagement.id} className="engagement-card">
               <span className="engagement-card__org">
-                {engagement.organization} {engagement.eventName && `- ${engagement.eventName}`}
+                {engagement.organization} {engagement.eventName && `· ${engagement.eventName}`}
               </span>
               <h3 className="engagement-card__title">{engagement.title}</h3>
-              <p className="engagement-card__audience">Audience: {engagement.audience}</p>
+              <div className="engagement-card__meta">
+                <span className="engagement-card__meta-label">Audience:</span>
+                <span className="engagement-card__audience">{engagement.audience}</span>
+              </div>
               {engagement.dateVerified && engagement.date && (
-                <p className="engagement-card__audience" style={{ marginTop: '0.5rem', fontSize: '0.875rem' }}>
+                <p className="engagement-card__date">
                   {engagement.date}
                 </p>
               )}

@@ -1,5 +1,13 @@
 import { useState, useEffect } from 'react';
-import { getHomePage, getSiteSettings, getThemeSettings } from './client';
+import {
+  getHomePage,
+  getSiteSettings,
+  getThemeSettings,
+  getAboutPage,
+  getSpeakingWorkshopsPage,
+  getCoachingPage,
+  getContactPage
+} from './client';
 
 /**
  * React hook to fetch homepage content from CMS
@@ -69,21 +77,19 @@ export function useAboutPage() {
 
   useEffect(() => {
     let cancelled = false;
-    import('./client').then(({ getAboutPage }) => {
-      getAboutPage()
-        .then((result) => {
-          if (!cancelled) {
-            setData(result);
-            setLoading(false);
-          }
-        })
-        .catch((err) => {
-          if (!cancelled) {
-            setError(err);
-            setLoading(false);
-          }
-        });
-    });
+    getAboutPage()
+      .then((result) => {
+        if (!cancelled) {
+          setData(result);
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        if (!cancelled) {
+          setError(err);
+          setLoading(false);
+        }
+      });
     return () => { cancelled = true; };
   }, []);
 
@@ -100,21 +106,19 @@ export function useSpeakingWorkshopsPage() {
 
   useEffect(() => {
     let cancelled = false;
-    import('./client').then(({ getSpeakingWorkshopsPage }) => {
-      getSpeakingWorkshopsPage()
-        .then((result) => {
-          if (!cancelled) {
-            setData(result);
-            setLoading(false);
-          }
-        })
-        .catch((err) => {
-          if (!cancelled) {
-            setError(err);
-            setLoading(false);
-          }
-        });
-    });
+    getSpeakingWorkshopsPage()
+      .then((result) => {
+        if (!cancelled) {
+          setData(result);
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        if (!cancelled) {
+          setError(err);
+          setLoading(false);
+        }
+      });
     return () => { cancelled = true; };
   }, []);
 
@@ -159,26 +163,25 @@ export function useCoachingPage() {
 
   useEffect(() => {
     let cancelled = false;
-    import('./client').then(({ getCoachingPage }) => {
-      getCoachingPage()
-        .then((result) => {
-          if (!cancelled) {
-            setData(result);
-            setLoading(false);
-          }
-        })
-        .catch((err) => {
-          if (!cancelled) {
-            setError(err);
-            setLoading(false);
-          }
-        });
-    });
+    getCoachingPage()
+      .then((result) => {
+        if (!cancelled) {
+          setData(result);
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        if (!cancelled) {
+          setError(err);
+          setLoading(false);
+        }
+      });
     return () => { cancelled = true; };
   }, []);
 
   return { data, loading, error };
 }
+
 /**
  * React hook to fetch contact page content from CMS
  */
@@ -189,21 +192,19 @@ export function useContactPage() {
 
   useEffect(() => {
     let cancelled = false;
-    import('./client').then(({ getContactPage }) => {
-      getContactPage()
-        .then((result) => {
-          if (!cancelled) {
-            setData(result);
-            setLoading(false);
-          }
-        })
-        .catch((err) => {
-          if (!cancelled) {
-            setError(err);
-            setLoading(false);
-          }
-        });
-    });
+    getContactPage()
+      .then((result) => {
+        if (!cancelled) {
+          setData(result);
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        if (!cancelled) {
+          setError(err);
+          setLoading(false);
+        }
+      });
     return () => { cancelled = true; };
   }, []);
 

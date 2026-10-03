@@ -20,12 +20,18 @@ export default function SpeakingTopics({ topics }) {
       <header className="speaking-topics__header">
         <span className="speaking-topics__label">Speaking</span>
         <h2 id="speaking-topics-heading" className="speaking-topics__title">Signature Topics</h2>
+        <p className="speaking-topics__subtitle">
+          Keynotes and practical talks designed to transform how audiences communicate, present, and lead under pressure.
+        </p>
       </header>
 
       <div className="speaking-topics__list">
         {validTopics.map((topic, index) => {
-          const hasImage = topic.image && topic.image.status === 'published';
-          const isEven = index % 2 !== 0; // 0-indexed
+          const imageUrl = typeof topic.image === 'string' ? topic.image : topic.image?.url;
+          const imageAlt = typeof topic.image === 'object' ? (topic.image?.alt || '') : '';
+          const isDraft = typeof topic.image === 'object' && topic.image?.status === 'draft';
+          const hasImage = Boolean(imageUrl) && !isDraft;
+          const isEven = index % 2 !== 0; // 0-indexed: alternating layout
           
           const className = [
             'topic-card',
@@ -40,9 +46,14 @@ export default function SpeakingTopics({ topics }) {
           return (
             <article key={topic.id} className={className}>
               <div className="topic-card__content">
-                <span className={`topic-card__status topic-card__status--${topic.status}`}>
-                  {topic.status}
-                </span>
+                <div className="topic-card__top">
+                  <span className={`topic-card__status topic-card__status--${topic.status}`}>
+                    {topic.status === 'delivered' ? 'Delivered Keynote' : 'In Development'}
+                  </span>
+                  <span className="topic-card__index" aria-hidden="true">
+                    0{index + 1}
+                  </span>
+                </div>
                 
                 <h3 className="topic-card__title">{topic.title}</h3>
                 <p className="topic-card__summary">{topic.summary}</p>
@@ -63,21 +74,24 @@ export default function SpeakingTopics({ topics }) {
                 </div>
 
                 {topic.inquiryLabel && topic.inquiryUrl && (
-                  <Link to={topic.inquiryUrl} className="btn-secondary">
-                    {topic.inquiryLabel}
-                  </Link>
+                  <div className="topic-card__actions">
+                    <Link to={topic.inquiryUrl} className="btn-primary topic-card__btn">
+                      {topic.inquiryLabel}
+                    </Link>
+                  </div>
                 )}
               </div>
 
               {hasImage && (
                 <div className="topic-card__media">
                   <img 
-                    src={topic.image.url} 
-                    alt={topic.image.alt || ''}
+                    src={imageUrl} 
+                    alt={imageAlt || topic.title}
                     className="topic-card__image"
                     style={{ objectPosition }}
                     loading="lazy"
                   />
+                  <div className="topic-card__media-glow" aria-hidden="true" />
                 </div>
               )}
             </article>

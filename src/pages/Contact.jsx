@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
 import { useContactPage } from '../cms/hooks';
 import ContactIntro from '../components/contact/ContactIntro';
 import InquiryForm from '../components/contact/InquiryForm';
 import ContactSocials from '../components/contact/ContactSocials';
+import SEO from '../components/common/SEO';
 import './Contact.css';
 
 /**
@@ -12,12 +12,6 @@ import './Contact.css';
  */
 export default function Contact() {
   const { data, loading, error } = useContactPage();
-
-  useEffect(() => {
-    if (data?.title) {
-      document.title = `${data.title} | Hamza Khan`;
-    }
-  }, [data]);
 
   if (error) {
     console.error('Failed to load contact page content:', error);
@@ -33,7 +27,14 @@ export default function Contact() {
   }
 
   return (
-    <div className="contact-page container">
+    <>
+      <SEO
+        title={data?.title || 'Contact & Inquiries'}
+        description={data?.intro?.description || 'Get in touch with Hamza Khan for speaking engagements, workshops, or coaching.'}
+        canonicalPath="/contact"
+        ogImage="/media/about-portrait.jpg"
+      />
+      <div className="contact-page container">
       <div className="contact-page__inner">
         <aside className="contact-page__sidebar">
           <ContactIntro content={data.intro} />
@@ -48,5 +49,6 @@ export default function Contact() {
         </main>
       </div>
     </div>
+  </>
   );
 }

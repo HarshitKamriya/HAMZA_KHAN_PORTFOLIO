@@ -24,6 +24,11 @@ export default function Hero({ heroData, loading }) {
 
   const { eyebrow, headline, subline, primaryCTA, secondaryCTA, image } = heroData;
 
+  const imageUrl = typeof image === 'string' ? image : image?.url;
+  const imageAlt = typeof image === 'object' ? (image?.alt || '') : '';
+  const isDraft = typeof image === 'object' && image?.status === 'draft';
+  const showImage = Boolean(imageUrl) && !isDraft;
+
   // Compute object-position from focal point
   const focalX = image?.focalPoint?.x ?? 0.5;
   const focalY = image?.focalPoint?.y ?? 0.35;
@@ -67,12 +72,12 @@ export default function Hero({ heroData, loading }) {
       </div>
 
       {/* Media */}
-      {image && image.status === 'published' && (
+      {showImage && (
         <div className="hero__media">
           <div className="hero__image-wrapper">
             <img
-              src={image.url}
-              alt={image.alt || ''}
+              src={imageUrl}
+              alt={imageAlt}
               className="hero__image"
               style={{ objectPosition }}
               loading="eager"
@@ -81,7 +86,7 @@ export default function Hero({ heroData, loading }) {
               height="1080"
             />
           </div>
-          {image.caption && (
+          {image?.caption && (
             <span className="hero__caption">{image.caption}</span>
           )}
         </div>

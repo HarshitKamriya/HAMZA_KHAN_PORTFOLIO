@@ -3,7 +3,7 @@
    ============================================================ */
 
 .sw-inquiry {
-  padding: var(--spacing-6xl) 0;
+  padding: 6.5rem 0;
   background-color: var(--color-background);
   text-align: center;
 }
@@ -20,14 +20,15 @@
   font-size: var(--text-display-md);
   font-weight: var(--text-display-md-weight);
   color: var(--color-foreground);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .sw-inquiry__body {
   font-family: var(--font-body);
   font-size: var(--text-body-lg);
   color: var(--color-muted);
-  margin-bottom: 3rem;
+  margin-bottom: 2.75rem;
+  line-height: 1.6;
 }
 
 .sw-inquiry__actions {
@@ -42,7 +43,7 @@
    ============================================================ */
 @media (max-width: 767px) {
   .sw-inquiry {
-    padding: var(--spacing-5xl) 0;
+    padding: var(--spacing-4xl) 0;
   }
   
   .sw-inquiry__heading {

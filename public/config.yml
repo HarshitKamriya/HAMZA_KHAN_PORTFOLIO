@@ -1,0 +1,336 @@
+# Decap CMS Configuration for Hamza Khan Website
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "public/media"
+public_folder: "/media"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    editor:
+      preview: false
+    files:
+      - label: "Homepage"
+        name: "home"
+        file: "public/content/homepage.json"
+        fields:
+          - { label: "Status", name: "status", widget: "select", options: ["published", "draft"], default: "published" }
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Subline", name: "subline", widget: "text" }
+              - label: "Primary CTA"
+                name: "primaryCTA"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - label: "Secondary CTA"
+                name: "secondaryCTA"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "URL", name: "url", widget: "image", required: false }
+                  - { label: "Alt Text", name: "alt", widget: "string", required: false }
+                  - { label: "Caption", name: "caption", widget: "string", required: false }
+                  - { label: "Status", name: "status", widget: "select", options: ["published", "draft"], default: "published", required: false }
+          - label: "Featured Video"
+            name: "featuredVideo"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Embed URL", name: "url", widget: "string" }
+              - { label: "Fallback URL", name: "fallbackUrl", widget: "string" }
+              - { label: "Status", name: "status", widget: "select", options: ["published", "draft"], default: "published" }
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "CTA Label", name: "ctaLabel", widget: "string" }
+              - { label: "CTA URL", name: "ctaUrl", widget: "string" }
+              - { label: "Order", name: "order", widget: "number" }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+          - label: "Story Preview"
+            name: "storyPreview"
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Excerpt", name: "excerpt", widget: "text" }
+              - { label: "Pull Quote", name: "pullQuote", widget: "text" }
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Image", name: "url", widget: "image", required: false }
+                  - { label: "Alt Text", name: "alt", widget: "string", required: false }
+                  - { label: "Status", name: "status", widget: "select", options: ["published", "draft"], default: "published", required: false }
+              - { label: "CTA Label", name: "ctaLabel", widget: "string" }
+              - { label: "CTA URL", name: "ctaUrl", widget: "string" }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+          - label: "Closing Inquiry"
+            name: "closingInquiry"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Supporting Text", name: "supportingText", widget: "text" }
+              - label: "Primary CTA"
+                name: "primaryCTA"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - label: "Secondary CTA"
+                name: "secondaryCTA"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+
+      - label: "About Page"
+        name: "about"
+        file: "public/content/about.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "SEO Description", name: "seoDescription", widget: "text" }
+          - { label: "Status", name: "status", widget: "select", options: ["published", "draft"], default: "published" }
+          - label: "Intro Section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Introduction", name: "introduction", widget: "text" }
+              - label: "Portrait"
+                name: "portrait"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Image URL", name: "url", widget: "image", required: false }
+                  - { label: "Alt Text", name: "alt", widget: "string", required: false }
+                  - { label: "Status", name: "status", widget: "select", options: ["published", "draft"], default: "published", required: false }
+              - label: "Primary CTA"
+                name: "primaryCTA"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - label: "Secondary CTA"
+                name: "secondaryCTA"
+                widget: "object"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+          - label: "Chapters"
+            name: "chapters"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Chapter Label", name: "chapterLabel", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body Text", name: "body", widget: "text" }
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Image", name: "url", widget: "image", required: false }
+                  - { label: "Alt Text", name: "alt", widget: "string", required: false }
+                  - { label: "Status", name: "status", widget: "select", options: ["published", "draft"], default: "published", required: false }
+              - { label: "Order", name: "order", widget: "number" }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+
+      - label: "Speaking & Workshops"
+        name: "speaking"
+        file: "public/content/speaking-workshops.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "SEO Description", name: "seoDescription", widget: "text" }
+          - { label: "Status", name: "status", widget: "select", options: ["published", "draft"], default: "published" }
+          - label: "Intro Section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Speaking Description", name: "speakingDescription", widget: "text" }
+              - { label: "Workshops Description", name: "workshopsDescription", widget: "text" }
+          - label: "Topics"
+            name: "topics"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Status", name: "status", widget: "select", options: ["delivered", "developing"] }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Audience", name: "audience", widget: "string" }
+              - { label: "Approach", name: "approach", widget: "text" }
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Image", name: "url", widget: "image", required: false }
+                  - { label: "Alt Text", name: "alt", widget: "string", required: false }
+                  - { label: "Status", name: "status", widget: "select", options: ["published", "draft"], default: "published", required: false }
+              - { label: "Inquiry Label", name: "inquiryLabel", widget: "string" }
+              - { label: "Inquiry URL", name: "inquiryUrl", widget: "string" }
+              - { label: "Order", name: "order", widget: "number" }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+
+      - label: "Coaching"
+        name: "coaching"
+        file: "public/content/coaching.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Status", name: "status", widget: "select", options: ["published", "draft"], default: "published" }
+          - label: "Intro Section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "CTA Label", name: "ctaLabel", widget: "string" }
+              - { label: "CTA URL", name: "ctaUrl", widget: "string" }
+              - { label: "Visibility", name: "visibility", widget: "boolean", default: true }
+          - label: "Challenges"
+            name: "challenges"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Order", name: "order", widget: "number" }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+          - label: "Individual Offer"
+            name: "individualOffer"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Audience", name: "audience", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Delivery Type", name: "deliveryType", widget: "string" }
+              - { label: "Internal Price", name: "internalPrice", widget: "number" }
+              - { label: "Public Price Enabled", name: "publicPriceEnabled", widget: "boolean", default: false }
+              - { label: "CTA Label", name: "ctaLabel", widget: "string" }
+              - { label: "CTA URL", name: "ctaUrl", widget: "string" }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+          - label: "Founder Pitch Pathway"
+            name: "founderPathway"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Evidence", name: "evidence", widget: "text" }
+              - { label: "CTA Label", name: "ctaLabel", widget: "string" }
+              - { label: "CTA URL", name: "ctaUrl", widget: "string" }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+
+      - label: "Contact"
+        name: "contact"
+        file: "public/content/contact.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Status", name: "status", widget: "select", options: ["published", "draft"], default: "published" }
+          - label: "Intro Section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - { label: "Privacy Text", name: "privacyText", widget: "text" }
+          - { label: "Success Message", name: "successMessage", widget: "text" }
+          - { label: "Failure Message", name: "failureMessage", widget: "text" }
+          - label: "Alternate Contact"
+            name: "alternateContact"
+            widget: "object"
+            fields:
+              - { label: "Email", name: "email", widget: "string" }
+          - label: "Social Links"
+            name: "socialLinks"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Platform", name: "platform", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Order", name: "order", widget: "number" }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+
+  - name: "custom_pages"
+    label: "Custom Pages"
+    folder: "public/content/pages"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Status", name: "status", widget: "select", options: ["published", "draft"], default: "draft" }
+      - label: "SEO Meta"
+        name: "seo"
+        widget: "object"
+        fields:
+          - { label: "Meta Title", name: "metaTitle", widget: "string", required: false }
+          - { label: "Meta Description", name: "metaDescription", widget: "text", required: false }
+      - label: "Sections"
+        name: "sections"
+        widget: "list"
+        types:
+          - label: "Rich Text"
+            name: "rich_text"
+            widget: "object"
+            fields:
+              - { label: "Content", name: "content", widget: "markdown" }
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Button Label", name: "buttonLabel", widget: "string" }
+              - { label: "Destination URL", name: "url", widget: "string" }
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - label: "Site Settings"
+        name: "site_settings"
+        file: "public/content/site-settings.json"
+        fields:
+          - { label: "Site Name", name: "siteName", widget: "string" }
+          - { label: "Site Tagline", name: "siteTagline", widget: "string" }
+          - { label: "Site Description", name: "siteDescription", widget: "text" }
+          - label: "Navigation Items"
+            name: "navigation"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+
+      - label: "Theme Settings"
+        name: "theme_settings"
+        file: "public/content/theme-settings.json"
+        fields:
+          - { label: "Background Color", name: "background", widget: "color", required: false }
+          - { label: "Foreground Color", name: "foreground", widget: "color", required: false }
+          - { label: "Surface Color", name: "surface", widget: "color", required: false }
+          - { label: "Primary Accent", name: "primaryAccent", widget: "color", required: false }
+          - { label: "Secondary Accent", name: "secondaryAccent", widget: "color", required: false }
+          - { label: "CTA Accent", name: "ctaAccent", widget: "color", required: false }

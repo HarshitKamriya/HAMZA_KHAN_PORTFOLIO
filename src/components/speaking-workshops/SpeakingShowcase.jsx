@@ -18,7 +18,11 @@ export default function SpeakingShowcase({ videos, gallery }) {
     <section className="speaking-showcase" aria-labelledby="showcase-heading">
       <div className="speaking-showcase__inner">
         <header className="speaking-showcase__header">
-          <h2 id="showcase-heading" className="sr-only">Speaking Showcase</h2>
+          <span className="speaking-showcase__label">Live Engagements</span>
+          <h2 id="showcase-heading" className="speaking-showcase__title">Speaking in Action</h2>
+          <p className="speaking-showcase__subtitle">
+            Snapshots and moments from keynote addresses, masterclasses, and executive presentations.
+          </p>
         </header>
 
         {validVideos.length > 0 && (

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { submitInquiry } from '../../services/contactService';
 import './InquiryForm.css';
@@ -13,12 +13,11 @@ const INQUIRY_TYPES = [
 
 export default function InquiryForm({ contactPageData }) {
   const [searchParams] = useSearchParams();
-  const initialType = searchParams.get('type');
+  const currentParamType = searchParams.get('type');
+  const validParamType = INQUIRY_TYPES.some(t => t.value === currentParamType) ? currentParamType : 'speaking';
   
-  // Validate query param against known types
-  const defaultType = INQUIRY_TYPES.some(t => t.value === initialType) ? initialType : 'speaking';
-  
-  const [inquiryType, setInquiryType] = useState(defaultType);
+  const [selectedType, setSelectedType] = useState(validParamType);
+  const [prevParamType, setPrevParamType] = useState(currentParamType);
   
   // Form State
   const [formData, setFormData] = useState({
@@ -31,16 +30,26 @@ export default function InquiryForm({ contactPageData }) {
     location: '',
     format: '',
     audienceSize: '',
-    url: ''
+    url: '',
+    botField: '' // Honeypot anti-spam
   });
   
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle'); // idle, submitting, success, error
 
-  // Reset errors and unneeded form data when switching type
-  useEffect(() => {
+  // Sync state if query parameter changes (render phase per React docs)
+  if (prevParamType !== currentParamType) {
+    setPrevParamType(currentParamType);
+    setSelectedType(validParamType);
     setErrors({});
-  }, [inquiryType]);
+  }
+
+  const inquiryType = selectedType;
+
+  const handleTypeChange = (newType) => {
+    setSelectedType(newType);
+    setErrors({});
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -73,6 +82,12 @@ export default function InquiryForm({ contactPageData }) {
     e.preventDefault();
     if (!validate()) return;
     
+    // Anti-spam honeypot: silently complete if bot filled the hidden field
+    if (formData.botField) {
+      setStatus('success');
+      return;
+    }
+
     setStatus('submitting');
     
     // Construct payload based on active fields
@@ -115,7 +130,20 @@ export default function InquiryForm({ contactPageData }) {
 
   return (
     <form className="inquiry-form" onSubmit={handleSubmit} noValidate>
-      
+      {/* Honeypot field (hidden from screen, caught by spam bots) */}
+      <div style={{ display: 'none' }} aria-hidden="true">
+        <label htmlFor="company_lead_verify">Leave this field blank</label>
+        <input
+          id="company_lead_verify"
+          name="botField"
+          type="text"
+          tabIndex="-1"
+          autoComplete="off"
+          value={formData.botField}
+          onChange={handleChange}
+        />
+      </div>
+
       {/* 1. Inquiry Type Selector */}
       <fieldset className="inquiry-form__section inquiry-form__fieldset">
         <legend className="inquiry-form__legend">Inquiry Type</legend>
@@ -127,7 +155,7 @@ export default function InquiryForm({ contactPageData }) {
                 name="inquiryType"
                 value={type.value}
                 checked={inquiryType === type.value}
-                onChange={(e) => setInquiryType(e.target.value)}
+                onChange={(e) => handleTypeChange(e.target.value)}
                 className="visually-hidden"
               />
               <span>{type.label}</span>

@@ -1,9 +1,9 @@
-import { useEffect } from 'react';
 import AboutIntro from '../components/about/AboutIntro';
 import AboutChapter from '../components/about/AboutChapter';
 import AboutFindingVoice from '../components/about/AboutFindingVoice';
 import AboutPhilosophy from '../components/about/AboutPhilosophy';
 import AboutFinalBio from '../components/about/AboutFinalBio';
+import SEO from '../components/common/SEO';
 import { useAboutPage } from '../cms/hooks';
 
 /**
@@ -14,12 +14,6 @@ import { useAboutPage } from '../cms/hooks';
  */
 export default function About() {
   const { data, loading, error } = useAboutPage();
-
-  useEffect(() => {
-    if (data?.title) {
-      document.title = `${data.title} | Hamza Khan`;
-    }
-  }, [data]);
 
   if (error) {
     console.error('Failed to load about page content:', error);
@@ -36,7 +30,14 @@ export default function About() {
     .sort((a, b) => a.order - b.order) || [];
 
   return (
-    <article className="about-page">
+    <>
+      <SEO
+        title={data?.title || 'About Hamza Khan'}
+        description={data?.seoDescription || data?.intro?.introduction}
+        canonicalPath="/about"
+        ogImage={data?.intro?.portrait?.url || '/media/about-portrait.jpg'}
+      />
+      <article className="about-page">
       {/* A1: Introduction */}
       <AboutIntro content={data.intro} />
 
@@ -54,5 +55,6 @@ export default function About() {
       {/* A7: Final Bio */}
       <AboutFinalBio content={data.finalBio} />
     </article>
+  </>
   );
 }

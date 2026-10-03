@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { useCoachingPage } from '../cms/hooks';
 import CoachingIntro from '../components/coaching/CoachingIntro';
 import CoachingChallenges from '../components/coaching/CoachingChallenges';
@@ -8,6 +7,7 @@ import CoachingProcess from '../components/coaching/CoachingProcess';
 import TestimonialSection from '../components/testimonials/TestimonialSection';
 import CoachingFAQ from '../components/coaching/CoachingFAQ';
 import ClosingInquiry from '../components/closing/ClosingInquiry';
+import SEO from '../components/common/SEO';
 
 /**
  * Coaching Page
@@ -16,18 +16,7 @@ import ClosingInquiry from '../components/closing/ClosingInquiry';
  */
 export default function Coaching() {
   const { data, loading, error } = useCoachingPage();
-  const [coachingTestimonials, setCoachingTestimonials] = useState([]);
-
-  useEffect(() => {
-    if (data?.title) {
-      document.title = `${data.title} | Hamza Khan`;
-    }
-    
-    // Testimonials are embedded in coaching.json directly as an array of objects
-    if (data?.testimonials) {
-      setCoachingTestimonials(data.testimonials);
-    }
-  }, [data]);
+  const coachingTestimonials = data?.testimonials || [];
 
   if (error) {
     console.error('Failed to load coaching page content:', error);
@@ -44,7 +33,14 @@ export default function Coaching() {
   }
 
   return (
-    <article className="coaching-page">
+    <>
+      <SEO
+        title={data?.title || 'Communication Coaching'}
+        description={data?.intro?.description || 'One-to-one online communication coaching for professionals.'}
+        canonicalPath="/coaching"
+        ogImage="/media/story-preview.jpg"
+      />
+      <article className="coaching-page">
       {/* Section C1: Intro */}
       <CoachingIntro content={data.intro} />
 
@@ -71,5 +67,6 @@ export default function Coaching() {
       {/* Section C8: Final Inquiry CTA */}
       <ClosingInquiry content={data.inquiry} />
     </article>
+  </>
   );
 }
