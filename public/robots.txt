@@ -6,4 +6,4 @@ Disallow: /admin.html
 Disallow: /config.yml
 Disallow: /content/
 
-Sitemap: https://hamzakhan.ca/sitemap.xml
+Sitemap: https://thehamzakhan.co/sitemap.xml

@@ -2,11 +2,26 @@
   "siteName": "HAMZA KHAN",
   "siteTagline": "Speaker & Communication Coach",
   "siteDescription": "I help professionals turn complex ideas into clear, confident communication — especially under pressure.",
+  "contactEmail": "hamzakhan21@ku.edu.tr",
   "navigation": [
     { "label": "Home", "url": "/" },
     { "label": "About", "url": "/about" },
     { "label": "Speaking & Workshops", "url": "/speaking-workshops" },
     { "label": "Coaching", "url": "/coaching" },
     { "label": "Contact", "url": "/contact" }
+  ],
+  "socialLinks": [
+    {
+      "platform": "LinkedIn",
+      "label": "LinkedIn",
+      "url": "",
+      "visible": true
+    },
+    {
+      "platform": "Instagram",
+      "label": "Instagram",
+      "url": "",
+      "visible": true
+    }
   ]
 }

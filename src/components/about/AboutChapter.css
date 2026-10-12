@@ -29,6 +29,13 @@
 }
 
 /* Typography */
+.about-chapter__meta-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.5rem;
+}
+
 .about-chapter__label {
   font-family: var(--font-body);
   font-size: var(--text-label);
@@ -36,7 +43,15 @@
   letter-spacing: var(--text-label-ls);
   color: var(--color-primary);
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+}
+
+.about-chapter__subtitle {
+  font-family: var(--font-display);
+  font-size: var(--text-heading-sm);
+  color: var(--color-foreground);
+  font-weight: 500;
+  font-style: italic;
+  opacity: 0.85;
 }
 
 .about-chapter__heading {

@@ -1,10 +1,10 @@
 {
   "title": "Speaking & Workshops",
-  "seoDescription": "Professional speaking and practical communication workshops by Hamza Khan. Learn how to turn complex ideas into clear, confident communication.",
+  "seoDescription": "Professional speaking and practical communication workshops by Hamza Khan. Keynotes on communication, agency, courage and opportunity.",
   "status": "published",
   "intro": {
     "heading": "Speaking & Workshops",
-    "speakingDescription": "Keynotes and facilitated sessions designed to deliver a powerful message to a large audience. Focused on navigating uncertainty and communicating clearly under pressure.",
+    "speakingDescription": "Keynotes on communication, agency, courage and opportunity — designed to help audiences think clearly, communicate confidently and take meaningful action when outcomes are uncertain.",
     "workshopsDescription": "Practical communication training designed for smaller groups. Focused on hands-on exercises, real-time feedback, and structuring clear messages.",
     "speakingCTA": {
       "label": "Explore Speaking",
@@ -15,11 +15,17 @@
       "url": "#workshops"
     }
   },
+  "oneSheet": {
+    "url": "/media/00_Hamza_Khan_Speaker_One-Sheet.pdf",
+    "buttonLabel": "Download Speaker One-Sheet",
+    "visible": true
+  },
   "topics": [
     {
       "id": "topic-1",
       "title": "Move Before You Know",
       "status": "delivered",
+      "deliveredAt": "TEDxNITSrinagar",
       "summary": "A talk about choosing a direction when the next outcome is uncertain.",
       "audience": "Professionals, leaders, and teams facing ambiguous challenges.",
       "approach": "Explores the psychological barriers to action and provides actionable frameworks for making decisions with imperfect information.",
@@ -71,75 +77,44 @@
       "inquiryLabel": "Inquire About Speaking",
       "inquiryUrl": "/contact?type=speaking",
       "order": 3,
-      "visible": true
+      "visible": false
     }
   ],
-  "videos": [],
-  "gallery": [
+  "videos": [
     {
-      "id": "gallery-1",
-      "url": "/media/hero-stage.png",
-      "alt": "Hamza Khan delivering keynote address at WorldDEF Istanbul",
-      "focalPoint": { "x": 0.5, "y": 0.4 },
-      "order": 1,
+      "id": "video-tedx-sw",
+      "title": "Move Before You Know — TEDx Talk",
+      "caption": "Delivered at TEDxNITSrinagar. Keynote on choosing direction under uncertainty.",
+      "youtubeUrlOrId": "",
+      "thumbnail": "/media/02_tedx_closeup.png",
+      "isPendingOfficial": true,
+      "published": true,
+      "sortOrder": 1,
       "status": "published"
     },
     {
-      "id": "gallery-2",
-      "url": "/media/Toastmasters Meetup in a Modern Tech Hub.png",
-      "alt": "Hamza Khan hosting a Toastmasters meetup at a modern tech hub",
-      "focalPoint": { "x": 0.5, "y": 0.45 },
-      "order": 2,
-      "status": "published"
-    },
-    {
-      "id": "gallery-3",
-      "url": "/media/TEMU Marketplace Masterclass Stage.png",
-      "alt": "Hamza Khan at the WorldDEF TEMU Marketplace Masterclass Stage",
-      "focalPoint": { "x": 0.5, "y": 0.4 },
-      "order": 3,
-      "status": "published"
-    },
-    {
-      "id": "gallery-4",
-      "url": "/media/Beyond the Comfort Zone Meetup.png",
-      "alt": "Beyond the Comfort Zone meetup with Toastmasters and Tech Istanbul",
-      "focalPoint": { "x": 0.5, "y": 0.4 },
-      "order": 4,
-      "status": "published"
-    },
-    {
-      "id": "gallery-5",
-      "url": "/media/Certificate of Completion Celebration.png",
-      "alt": "Hamza Khan receiving a certificate of completion",
-      "focalPoint": { "x": 0.5, "y": 0.4 },
-      "order": 5,
-      "status": "published"
-    },
-    {
-      "id": "gallery-6",
-      "url": "/media/Formal Diplomatic Handshake in an Elegant Hall.png",
-      "alt": "Hamza Khan in a formal diplomatic handshake",
-      "focalPoint": { "x": 0.5, "y": 0.35 },
-      "order": 6,
+      "id": "video-masterclass-sw",
+      "title": "Make Complex Ideas Clear Under Pressure",
+      "caption": "Keynote highlights on structuring messages and commanding the stage in high-stakes environments.",
+      "youtubeUrlOrId": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail": "/media/TEMU Marketplace Masterclass Stage.png",
+      "isPendingOfficial": false,
+      "published": true,
+      "sortOrder": 2,
       "status": "published"
     }
   ],
+  "gallery": [],
   "credentials": [
     {
       "id": "cred-1",
       "label": "Toastmasters International",
-      "description": "Division-level speaking achievement.",
+      "description": "2025 Division Champion — Türkiye.",
       "verificationStatus": "verified",
       "order": 1,
       "visible": true
     }
   ],
-  "oneSheet": {
-    "url": "",
-    "buttonLabel": "Download Speaker One-Sheet",
-    "visible": false
-  },
   "workshops": [
     {
       "id": "ws-1",
@@ -193,14 +168,16 @@
       "visible": true
     }
   ],
+  "engagementsHeading": "Selected Workshops & Engagements",
   "testimonials": [
     {
-      "id": "test-1",
-      "quote": "Hamza's ability to simplify complex ideas is remarkable. His session helped our team re-evaluate how we communicate our core values.",
-      "category": "speaking",
-      "displayName": "Event Organizer",
-      "role": "Director of L&D",
-      "company": "Professional Association",
+      "id": "test-serdar",
+      "quote": "What I loved most about the workshop was how much space was given for participant engagement. This gave us the chance to practice and helped us grasp the topic more deeply. Hamza was both eager to teach and very approachable.",
+      "category": "workshop",
+      "displayName": "Serdar Zengin",
+      "role": "Workshop Participant",
+      "permissionStatus": "approved",
+      "featured": true,
       "order": 1,
       "visible": true,
       "status": "published"
@@ -216,6 +193,11 @@
     "secondaryCTA": {
       "label": "Discuss a Workshop",
       "url": "/contact?type=workshop"
+    },
+    "oneSheetLink": {
+      "label": "Download Speaker One-Sheet",
+      "url": "/media/00_Hamza_Khan_Speaker_One-Sheet.pdf",
+      "visible": true
     }
   }
 }

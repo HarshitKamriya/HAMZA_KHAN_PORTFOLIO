@@ -171,6 +171,32 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Speaking Description", name: "speakingDescription", widget: "text" }
               - { label: "Workshops Description", name: "workshopsDescription", widget: "text" }
+          - label: "Speaker One-Sheet"
+            name: "oneSheet"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "PDF URL", name: "url", widget: "file", required: false }
+              - { label: "Button Label", name: "buttonLabel", widget: "string", default: "Download Speaker One-Sheet" }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+          - label: "Engagements Section Heading"
+            name: "engagementsHeading"
+            widget: "string"
+            default: "Selected Workshops & Engagements"
+            required: false
+          - label: "Speaking Videos"
+            name: "videos"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Caption", name: "caption", widget: "text", required: false }
+              - { label: "YouTube URL or ID", name: "youtubeUrlOrId", widget: "string", required: false }
+              - { label: "Thumbnail", name: "thumbnail", widget: "image", required: false }
+              - { label: "Pending Official Release", name: "isPendingOfficial", widget: "boolean", default: false }
+              - { label: "Published", name: "published", widget: "boolean", default: true }
+              - { label: "Sort Order", name: "sortOrder", widget: "number", default: 1 }
+              - { label: "Status", name: "status", widget: "select", options: ["published", "draft"], default: "published" }
           - label: "Topics"
             name: "topics"
             widget: "list"
@@ -178,6 +204,7 @@ collections:
               - { label: "ID", name: "id", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Status", name: "status", widget: "select", options: ["delivered", "developing"] }
+              - { label: "Delivered At (event name)", name: "deliveredAt", widget: "string", required: false }
               - { label: "Summary", name: "summary", widget: "text" }
               - { label: "Audience", name: "audience", widget: "string" }
               - { label: "Approach", name: "approach", widget: "text" }
@@ -242,6 +269,34 @@ collections:
               - { label: "CTA Label", name: "ctaLabel", widget: "string" }
               - { label: "CTA URL", name: "ctaUrl", widget: "string" }
               - { label: "Visible", name: "visible", widget: "boolean", default: true }
+          - label: "Present With Confidence (Group Offer)"
+            name: "groupOffer"
+            widget: "object"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Audience", name: "audience", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Core Areas"
+                name: "coreAreas"
+                widget: "list"
+                fields:
+                  - { label: "ID", name: "id", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "string", required: false }
+              - label: "Image"
+                name: "image"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Image", name: "url", widget: "image", required: false }
+                  - { label: "Alt Text", name: "alt", widget: "string", required: false }
+              - { label: "Status", name: "status", widget: "select", options: ["current", "developing", "paused"], default: "current" }
+              - { label: "CTA Label", name: "ctaLabel", widget: "string" }
+              - { label: "CTA URL", name: "ctaUrl", widget: "string" }
+              - { label: "Order", name: "order", widget: "number", default: 3 }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
 
       - label: "Contact"
         name: "contact"
@@ -271,6 +326,15 @@ collections:
               - { label: "Platform", name: "platform", widget: "string" }
               - { label: "Label", name: "label", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
+              - { label: "Order", name: "order", widget: "number" }
+              - { label: "Visible", name: "visible", widget: "boolean", default: true }
+          - label: "FAQs"
+            name: "faqs"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
               - { label: "Order", name: "order", widget: "number" }
               - { label: "Visible", name: "visible", widget: "boolean", default: true }
 

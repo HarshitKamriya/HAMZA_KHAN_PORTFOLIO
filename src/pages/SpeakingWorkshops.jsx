@@ -40,8 +40,8 @@ export default function SpeakingWorkshops() {
         ogImage="/media/topic-move.jpg"
       />
       <article className="speaking-workshops-page">
-      {/* Section 1: Intro */}
-      <SWIntro content={data.intro} />
+      {/* Section 1: Intro (oneSheet prop enables download button in hero) */}
+      <SWIntro content={data.intro} oneSheet={data.oneSheet} />
 
       {/* Section 2: Speaking Topics */}
       <SpeakingTopics topics={data.topics} />
@@ -55,8 +55,8 @@ export default function SpeakingWorkshops() {
       {/* Section 5: Workshops Offering */}
       <WorkshopsOffering workshops={data.workshops} />
 
-      {/* Section 6: Engagements */}
-      <WorkshopEngagements engagements={data.engagements} />
+      {/* Section 6: Engagements — heading is CMS-driven via engagementsHeading */}
+      <WorkshopEngagements engagements={data.engagements} heading={data.engagementsHeading} />
 
       {/* Section 7: Feedback */}
       <SWTestimonials testimonials={data.testimonials} />

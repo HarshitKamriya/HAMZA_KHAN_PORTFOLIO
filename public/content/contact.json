@@ -2,30 +2,95 @@
   "status": "published",
   "title": "Contact",
   "intro": {
-    "heading": "Tell me what you have in mind.",
-    "description": "Whether you are planning an event, exploring a workshop or interested in coaching, send a few details and I will follow up with the appropriate next steps."
+    "heading": "Tell me what you’re working on.",
+    "description": "Whether you’re planning an event, looking for communication coaching, or exploring a workshop, send the details below and I’ll get back to you with the next step."
   },
   "privacyText": "Your information will only be used to respond to your inquiry and discuss potential collaboration.",
-  "successMessage": "Thank you — your inquiry has been submitted. Please watch the email address you provided for a reply.",
-  "failureMessage": "Your message could not be sent. Please try again or use the alternate contact address shown below.",
+  "successMessage": "Thank you — your inquiry has been received. Please watch your email inbox for a personal response from Hamza.",
+  "failureMessage": "Your message could not be sent. Please check your connection and try again, or email directly at hamzakhan21@ku.edu.tr.",
   "alternateContact": {
-    "email": "hello@example.com"
+    "email": "hamzakhan21@ku.edu.tr"
   },
   "socialLinks": [
     {
       "id": "social-li",
       "platform": "LinkedIn",
       "label": "Connect on LinkedIn",
-      "url": "https://linkedin.com",
+      "url": "",
       "order": 1,
       "visible": true
     },
     {
-      "id": "social-x",
-      "platform": "X",
-      "label": "Follow on X",
-      "url": "https://x.com",
+      "id": "social-ig",
+      "platform": "Instagram",
+      "label": "Follow on Instagram",
+      "url": "",
       "order": 2,
+      "visible": true
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq-intl",
+      "question": "Do you work with clients internationally?",
+      "answer": "Yes. Coaching is available online internationally, while speaking engagements and workshops can be delivered virtually or in person depending on the opportunity.",
+      "order": 1,
+      "visible": true
+    },
+    {
+      "id": "faq-online",
+      "question": "Is coaching online?",
+      "answer": "Yes. Individual coaching, founder pitch coaching, and the group intensive can be delivered online.",
+      "order": 2,
+      "visible": true
+    },
+    {
+      "id": "faq-diff",
+      "question": "What is the difference between speaking, workshops and coaching?",
+      "answer": "Speaking is designed for larger audiences and idea-led events. Workshops are interactive group sessions with practice and feedback. Coaching is more personalized and focused on an individual or small-group communication goal.",
+      "order": 3,
+      "visible": true
+    },
+    {
+      "id": "faq-group",
+      "question": "Do you offer group coaching?",
+      "answer": "Yes. Present With Confidence is the current small-group coaching pathway, built around clear thinking, confident delivery, and communicating under pressure.",
+      "order": 4,
+      "visible": true
+    },
+    {
+      "id": "faq-intensive",
+      "question": "How does the 4-week intensive work?",
+      "answer": "It is a structured small-group communication intensive with guided practice and feedback. Current cohort dates, format, availability and quotation are shared after inquiry.",
+      "order": 5,
+      "visible": true
+    },
+    {
+      "id": "faq-quotations",
+      "question": "How are quotations handled?",
+      "answer": "Pricing is not listed publicly. After an inquiry, Hamza confirms fit, format and scope and provides a private quotation.",
+      "order": 6,
+      "visible": true
+    },
+    {
+      "id": "faq-founder",
+      "question": "Who is founder pitch coaching for?",
+      "answer": "Founders preparing an investor pitch, startup competition, demo, important presentation, or high-stakes Q&A.",
+      "order": 7,
+      "visible": true
+    },
+    {
+      "id": "faq-custom-ws",
+      "question": "Can an organization request a custom workshop?",
+      "answer": "Yes. Workshops can be adapted to the audience, communication challenge, available time and delivery format.",
+      "order": 8,
+      "visible": true
+    },
+    {
+      "id": "faq-inquire",
+      "question": "How do I inquire or book?",
+      "answer": "Choose the relevant inquiry type on this page, share the essential details, and Hamza will follow up with the appropriate next step.",
+      "order": 9,
       "visible": true
     }
   ]

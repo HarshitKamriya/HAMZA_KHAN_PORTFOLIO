@@ -3,7 +3,7 @@
   "hero": {
     "eyebrow": "HAMZA KHAN · SPEAKER & COMMUNICATION COACH",
     "headline": "Make your ideas clear when it matters most.",
-    "subline": "I help professionals turn complex ideas into clear, confident communication — especially under pressure.",
+    "subline": "Hamza helps professionals make complex ideas clear and communicate confidently, especially under pressure.",
     "primaryCTA": {
       "label": "Invite Hamza to Speak",
       "url": "/contact?type=speaking"
@@ -32,6 +32,7 @@
     {
       "id": "cred-tedx",
       "label": "TEDx Speaker",
+      "shortDescription": "TEDx Talk · Move Before You Know",
       "verificationStatus": "approved",
       "order": 1,
       "visible": true
@@ -39,23 +40,48 @@
     {
       "id": "cred-toastmasters",
       "label": "Award-Winning Speaker",
-      "shortDescription": "Toastmasters Distinction",
+      "shortDescription": "2025 Toastmasters Division Champion — Türkiye",
       "verificationStatus": "approved",
       "order": 2,
       "visible": true
     },
     {
       "id": "cred-coach",
-      "label": "Trusted Communication Coach",
+      "label": "Communication Coach",
+      "shortDescription": "Online Internationally",
       "verificationStatus": "approved",
       "order": 3,
       "visible": true
     }
   ],
+  "speakingVideos": [
+    {
+      "id": "video-tedx",
+      "title": "Move Before You Know — TEDx Talk",
+      "caption": "Delivered at TEDxNITSrinagar. Keynote on choosing direction under uncertainty.",
+      "youtubeUrlOrId": "",
+      "thumbnail": "/media/02_tedx_closeup.png",
+      "isPendingOfficial": true,
+      "published": true,
+      "sortOrder": 1,
+      "status": "published"
+    },
+    {
+      "id": "video-masterclass",
+      "title": "Make Complex Ideas Clear Under Pressure",
+      "caption": "Keynote highlights on structuring messages and commanding the stage in high-stakes environments.",
+      "youtubeUrlOrId": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "thumbnail": "/media/TEMU Marketplace Masterclass Stage.png",
+      "isPendingOfficial": false,
+      "published": true,
+      "sortOrder": 2,
+      "status": "published"
+    }
+  ],
   "featuredVideo": {
     "id": "video-main",
     "provider": "youtube",
-    "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "title": "Make your ideas clear under pressure",
     "description": "Watch Hamza deliver a keynote on effective communication strategies for high-stakes environments.",
     "thumbnail": {
@@ -66,7 +92,7 @@
       "status": "published"
     },
     "fallbackUrl": "/contact?type=speaking",
-    "status": "pending"
+    "status": "published"
   },
   "services": [
     {
@@ -106,7 +132,10 @@
       "url": "/media/Comfort Zone Conference Presentation.png",
       "type": "image",
       "alt": "Hamza Khan delivering a keynote on stage at Beyond the Comfort Zone",
-      "focalPoint": { "x": 0.5, "y": 0.3 },
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
       "status": "published"
     },
     "ctaLabel": "Discover My Story",
@@ -116,26 +145,14 @@
   "featuredTestimonials": [
     {
       "permissionStatus": "approved",
-      "displayName": "Sarah J.",
+      "displayName": "Hatice Gülnhal Yavuz",
+      "role": "Workshop Participant",
       "featured": true,
       "order": 1,
       "status": "published",
-      "role": "VP of Communications",
-      "id": "test-1",
-      "quote": "Hamza completely transformed the way our leadership team approaches high-stakes presentations. His framework is brilliant.",
-      "company": "Tech Innovators",
-      "category": "speaking"
-    },
-    {
-      "permissionStatus": "approved",
-      "displayName": "Michael T.",
-      "featured": true,
-      "order": 2,
-      "status": "published",
-      "role": "Startup Founder",
-      "id": "test-2",
-      "quote": "Working 1-on-1 with Hamza gave me the confidence to deliver the most important pitch of my career. Highly recommended.",
-      "category": "coaching"
+      "id": "test-hatice",
+      "quote": "The session felt genuine and thoughtfully designed. It went beyond motivation and created space for honest reflection and real interaction. The atmosphere made it easy to engage, share and truly think about personal direction.",
+      "category": "workshop"
     }
   ],
   "closingInquiry": {

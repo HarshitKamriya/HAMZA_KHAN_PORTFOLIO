@@ -33,16 +33,12 @@ export default function AboutIntro({ content }) {
           </p>
           
           <div className="about-intro__actions">
-            {content.primaryCTA && (
-              <Link to={content.primaryCTA.url} className="btn-primary">
-                {content.primaryCTA.label}
-              </Link>
-            )}
-            {content.secondaryCTA && (
-              <Link to={content.secondaryCTA.url} className="btn-secondary">
-                {content.secondaryCTA.label}
-              </Link>
-            )}
+            <a href="#story" className="btn-secondary">
+              Read My Story
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '0.5rem', width: '14px', height: '14px' }} aria-hidden="true">
+                <path d="M8 3v10M3 9l5 5 5-5" />
+              </svg>
+            </a>
           </div>
         </div>
 

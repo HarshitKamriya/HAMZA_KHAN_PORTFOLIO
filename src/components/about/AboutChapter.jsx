@@ -38,13 +38,22 @@ export default function AboutChapter({ chapter, index }) {
   const objectPosition = `${focalX * 100}% ${focalY * 100}%`;
 
   return (
-    <section className={className} aria-labelledby={`chapter-heading-${chapter.id}`}>
+    <section 
+      id={index === 0 ? 'story' : `chapter-${chapter.id}`}
+      className={className} 
+      aria-labelledby={`chapter-heading-${chapter.id}`}
+    >
       <div className={innerClassName}>
         
         <div className="about-chapter__content">
-          {chapter.chapterLabel && (
-            <span className="about-chapter__label">{chapter.chapterLabel}</span>
-          )}
+          <div className="about-chapter__meta-strip">
+            {chapter.chapterLabel && (
+              <span className="about-chapter__label">{chapter.chapterLabel}</span>
+            )}
+            {chapter.subtitle && (
+              <span className="about-chapter__subtitle">{chapter.subtitle}</span>
+            )}
+          </div>
           
           <h2 id={`chapter-heading-${chapter.id}`} className="about-chapter__heading">
             {chapter.heading}

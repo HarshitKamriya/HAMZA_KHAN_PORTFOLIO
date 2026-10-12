@@ -10,21 +10,32 @@
  */
 
 /**
+ * Notification destination for all inquiries:
+ * hamzakhan21@ku.edu.tr
+ */
+export const NOTIFICATION_DESTINATION = 'hamzakhan21@ku.edu.tr';
+
+/**
  * Submit an inquiry
  * @param {Object} payload The structured inquiry data
  * @returns {Promise<{success: boolean, message?: string}>}
  */
 export async function submitInquiry(payload) {
+  // Destination: hamzakhan21@ku.edu.tr
+  const submissionData = {
+    ...payload,
+    destination: NOTIFICATION_DESTINATION
+  };
+
   // Simulate network delay
-  await new Promise(resolve => setTimeout(resolve, 1500));
+  await new Promise(resolve => setTimeout(resolve, 800));
 
-  console.log('Submitting inquiry payload:', payload);
+  console.log(`Submitting inquiry to ${NOTIFICATION_DESTINATION}:`, submissionData);
 
-  // Simulate success (90% of the time) or failure (10% of the time)
-  // For testing reliability, we'll just always succeed unless the email is 'fail@example.com'
-  if (payload.email === 'fail@example.com') {
-    throw new Error('Simulated network or provider failure.');
+  // Failure simulation hook for QA testing retry handling without invalid domain
+  if (payload.email === 'test-fail@qa.internal' || payload.simulateFailure) {
+    throw new Error('Simulated network or provider failure for QA testing.');
   }
 
-  return { success: true };
+  return { success: true, destination: NOTIFICATION_DESTINATION };
 }

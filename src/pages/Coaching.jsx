@@ -3,9 +3,9 @@ import CoachingIntro from '../components/coaching/CoachingIntro';
 import CoachingChallenges from '../components/coaching/CoachingChallenges';
 import CoachingIndividual from '../components/coaching/CoachingIndividual';
 import CoachingFounder from '../components/coaching/CoachingFounder';
+import CoachingGroupOffer from '../components/coaching/CoachingGroupOffer';
 import CoachingProcess from '../components/coaching/CoachingProcess';
 import TestimonialSection from '../components/testimonials/TestimonialSection';
-import CoachingFAQ from '../components/coaching/CoachingFAQ';
 import ClosingInquiry from '../components/closing/ClosingInquiry';
 import SEO from '../components/common/SEO';
 
@@ -53,16 +53,16 @@ export default function Coaching() {
       {/* Section C4: Founder Pitch Pathway */}
       <CoachingFounder founderPathway={data.founderPathway} />
 
-      {/* Section C5: Process */}
+      {/* Section C5: Present With Confidence (Group Offer) */}
+      <CoachingGroupOffer offer={data.groupOffer} />
+
+      {/* Section C6: Process */}
       <CoachingProcess process={data.process} />
 
-      {/* Section C6: Feedback */}
+      {/* Section C7: Feedback */}
       {coachingTestimonials.length > 0 && (
         <TestimonialSection testimonials={coachingTestimonials} />
       )}
-
-      {/* Section C7: FAQs */}
-      <CoachingFAQ faqs={data.faqs} />
 
       {/* Section C8: Final Inquiry CTA */}
       <ClosingInquiry content={data.inquiry} />

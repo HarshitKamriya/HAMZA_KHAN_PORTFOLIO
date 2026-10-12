@@ -4,7 +4,7 @@
   "intro": {
     "eyebrow": "COACHING",
     "heading": "Communicate clearly when it matters most.",
-    "description": "One-to-one online communication coaching for professionals who want to organize their ideas and practise speaking with greater clarity and confidence.",
+    "description": "Online communication coaching for professionals who want to organize their ideas and practise speaking with greater clarity and confidence.",
     "ctaLabel": "Inquire About Coaching",
     "ctaUrl": "/contact?type=coaching",
     "visibility": true
@@ -42,6 +42,34 @@
     "sessionCount": 0,
     "ctaLabel": "Discuss Founder Pitch Coaching",
     "ctaUrl": "/contact?type=founder",
+    "order": 2,
+    "visible": true
+  },
+  "groupOffer": {
+    "id": "group-pwc",
+    "title": "Present With Confidence",
+    "subtitle": "4-Week Group Communication Intensive",
+    "audience": "Professionals seeking structured group practice",
+    "description": "Small-group coaching for professionals who want structured practice in clear thinking, confident delivery, and communicating under pressure.",
+    "coreAreas": [
+      { "id": "ca1", "title": "Clear Thinking", "description": "Structure ideas without rambling." },
+      { "id": "ca2", "title": "Confident Delivery", "description": "Improve voice, presence and delivery." },
+      { "id": "ca3", "title": "Under Pressure", "description": "Practise interviews, Q&A and impromptu speaking." }
+    ],
+    "image": {
+      "id": "pwc-img",
+      "url": "/media/05_workshop_close.jpeg",
+      "type": "image",
+      "alt": "Hamza Khan facilitating a small-group coaching session",
+      "focalPoint": { "x": 0.5, "y": 0.4 },
+      "status": "published"
+    },
+    "status": "current",
+    "internalPrice": 0,
+    "publicPriceEnabled": false,
+    "ctaLabel": "Inquire About the Next Cohort",
+    "ctaUrl": "/contact?type=coaching",
+    "order": 3,
     "visible": true
   },
   "process": [
@@ -51,36 +79,16 @@
   ],
   "testimonials": [
     {
-      "id": "test-c1",
-      "quote": "Working 1-on-1 with Hamza gave me the confidence to deliver the most important pitch of my career. Highly recommended.",
-      "category": "coaching",
-      "displayName": "Michael T.",
-      "role": "Startup Founder",
+      "id": "test-omar",
+      "quote": "The workshop was a great opportunity to reflect on myself, my story and my future. I was able to see where I was lost, and Mr. Khan gave me the motivation to find myself and progress further.",
+      "category": "workshop",
+      "displayName": "Omar Yalçın Antar",
+      "role": "Workshop Participant",
       "permissionStatus": "approved",
       "featured": true,
       "order": 1,
       "status": "published"
-    },
-    {
-      "id": "test-c2",
-      "quote": "The feedback I received during our coaching sessions completely changed how I approach internal communications.",
-      "category": "coaching",
-      "displayName": "Jessica R.",
-      "role": "Director of Operations",
-      "permissionStatus": "approved",
-      "featured": false,
-      "order": 2,
-      "status": "published"
     }
-  ],
-  "faqs": [
-    { "id": "faq1", "question": "Who is coaching for?", "answer": "Coaching is designed for individual professionals, leaders, and founders seeking to improve their communication clarity and delivery in high-stakes environments.", "category": "general", "order": 1, "visible": true },
-    { "id": "faq2", "question": "How does coaching happen?", "answer": "All sessions are conducted one-to-one online via video call. We focus on your specific materials and scenarios, incorporating practice and immediate feedback.", "category": "process", "order": 2, "visible": true },
-    { "id": "faq3", "question": "Is coaching online?", "answer": "Yes, to accommodate an international client base and busy professional schedules, all individual coaching is delivered online.", "category": "logistics", "order": 3, "visible": true },
-    { "id": "faq4", "question": "How does the quotation process work?", "answer": "Because communication needs vary, I provide a custom private quotation after reviewing your inquiry and confirming we are a good fit.", "category": "process", "order": 4, "visible": true },
-    { "id": "faq5", "question": "What should I share in an inquiry?", "answer": "Briefly describe your current role, the specific communication challenge you are facing, and any upcoming deadlines (like a presentation or interview).", "category": "process", "order": 5, "visible": true },
-    { "id": "faq6", "question": "Is this suitable for presentations, interviews, or meetings?", "answer": "Yes. Coaching can be tailored to specific events like a keynote or interview, or focused on general improvement in everyday meetings.", "category": "general", "order": 6, "visible": true },
-    { "id": "faq7", "question": "How does founder-pitch coaching work?", "answer": "Founder coaching focuses specifically on communicating the value of your idea to investors or stakeholders, including pitch structure and Q&A preparation.", "category": "founder", "order": 7, "visible": true }
   ],
   "inquiry": {
     "heading": "Ready to improve your communication?",

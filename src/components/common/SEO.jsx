@@ -40,7 +40,7 @@ export default function SEO({
     }
 
     // 3. Canonical URL
-    const origin = 'https://hamzakhan.ca';
+    const origin = 'https://thehamzakhan.co';
     // Strip query parameters and hashes for canonicalization
     const cleanPath = canonicalPath.split('?')[0].split('#')[0];
     const canonicalUrl = `${origin}${cleanPath.startsWith('/') ? cleanPath : `/${cleanPath}`}`;

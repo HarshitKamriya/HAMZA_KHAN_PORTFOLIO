@@ -2,6 +2,7 @@ import { useContactPage } from '../cms/hooks';
 import ContactIntro from '../components/contact/ContactIntro';
 import InquiryForm from '../components/contact/InquiryForm';
 import ContactSocials from '../components/contact/ContactSocials';
+import ContactFAQ from '../components/contact/ContactFAQ';
 import SEO from '../components/common/SEO';
 import './Contact.css';
 
@@ -48,6 +49,9 @@ export default function Contact() {
           <InquiryForm contactPageData={data} />
         </main>
       </div>
+
+      {/* FAQ Section — below the form, supports #faq anchor */}
+      <ContactFAQ faqs={data.faqs} />
     </div>
   </>
   );

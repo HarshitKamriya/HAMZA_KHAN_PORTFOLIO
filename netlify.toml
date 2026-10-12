@@ -4,6 +4,8 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  DISABLE_NETLIFY_TOOLBAR = "true"
+  DISABLE_NETLIFY_COLLABORATOR_UI = "true"
 
 # SPA fallback for client-side routing
 [[redirects]]

@@ -22,13 +22,29 @@ export default function ContactSocials({ socialLinks, alternateContact }) {
 
       {validLinks.length > 0 && (
         <ul className="contact-socials__list">
-          {validLinks.map(link => (
-            <li key={link.id}>
-              <a href={link.url} target="_blank" rel="noopener noreferrer" className="contact-socials__link">
-                {link.label}
-              </a>
-            </li>
-          ))}
+          {validLinks.map(link => {
+            const hasValidUrl = Boolean(
+              link.url &&
+              link.url.trim().length > 0 &&
+              link.url.startsWith('http') &&
+              !link.url.replace(/\/$/, '').endsWith('linkedin.com') &&
+              !link.url.replace(/\/$/, '').endsWith('instagram.com')
+            );
+
+            return (
+              <li key={link.id}>
+                {hasValidUrl ? (
+                  <a href={link.url} target="_blank" rel="noopener noreferrer" className="contact-socials__link">
+                    {link.label}
+                  </a>
+                ) : (
+                  <span className="contact-socials__link contact-socials__link--pending" title="Profile link coming soon" aria-disabled="true">
+                    {link.label} <span style={{ fontSize: '0.75rem', opacity: 0.7 }}>(Pending)</span>
+                  </span>
+                )}
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>

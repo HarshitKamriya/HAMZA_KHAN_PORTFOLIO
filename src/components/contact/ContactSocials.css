@@ -50,3 +50,15 @@
 .contact-socials__link:hover {
   color: var(--color-foreground);
 }
+
+.contact-socials__link--pending {
+  color: var(--color-muted);
+  opacity: 0.6;
+  cursor: default;
+  user-select: none;
+}
+
+.contact-socials__link--pending:hover {
+  color: var(--color-muted);
+}
+

@@ -2,14 +2,14 @@ import AboutIntro from '../components/about/AboutIntro';
 import AboutChapter from '../components/about/AboutChapter';
 import AboutFindingVoice from '../components/about/AboutFindingVoice';
 import AboutPhilosophy from '../components/about/AboutPhilosophy';
-import AboutFinalBio from '../components/about/AboutFinalBio';
+import TestimonialSection from '../components/testimonials/TestimonialSection';
 import SEO from '../components/common/SEO';
 import { useAboutPage } from '../cms/hooks';
 
 /**
  * About Page
  * 
- * Renders the editorial narrative of Hamza Khan.
+ * Renders the approved 5-part editorial narrative of Hamza Khan.
  * Route: /about
  */
 export default function About() {
@@ -21,7 +21,7 @@ export default function About() {
   }
 
   if (loading || !data) {
-    return null; // A real app might have a skeleton loader here
+    return null;
   }
 
   // Ensure content-truth by filtering out unpublished chapters
@@ -35,26 +35,28 @@ export default function About() {
         title={data?.title || 'About Hamza Khan'}
         description={data?.seoDescription || data?.intro?.introduction}
         canonicalPath="/about"
-        ogImage={data?.intro?.portrait?.url || '/media/about-portrait.jpg'}
+        ogImage={data?.intro?.portrait?.url || '/media/Startup Event Portrait with Trophy and Microphone.png'}
       />
       <article className="about-page">
-      {/* A1: Introduction */}
-      <AboutIntro content={data.intro} />
+        {/* A1: Introduction with 'Read My Story' anchor */}
+        <AboutIntro content={data.intro} />
 
-      {/* A2, A3, A4: Narrative Chapters */}
-      {validChapters.map((chapter, index) => (
-        <AboutChapter key={chapter.id} chapter={chapter} index={index} />
-      ))}
+        {/* Narrative Chapters (01 through 05) */}
+        {validChapters.map((chapter, index) => (
+          <AboutChapter key={chapter.id} chapter={chapter} index={index} />
+        ))}
 
-      {/* A5: Finding a Voice / Milestones */}
-      <AboutFindingVoice milestones={data.milestones} />
+        {/* Short factual milestone progression + Award Plaque Proof */}
+        <AboutFindingVoice />
 
-      {/* A6: Philosophy */}
-      <AboutPhilosophy content={data.philosophy} />
+        {/* Dave Armstrong Testimonial */}
+        {data.testimonials && data.testimonials.length > 0 && (
+          <TestimonialSection testimonials={data.testimonials} />
+        )}
 
-      {/* A7: Final Bio */}
-      <AboutFinalBio content={data.finalBio} />
-    </article>
-  </>
+        {/* Philosophy with 'Move before you know' and primary service CTAs */}
+        <AboutPhilosophy content={data.philosophy} />
+      </article>
+    </>
   );
 }

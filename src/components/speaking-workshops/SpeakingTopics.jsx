@@ -9,8 +9,9 @@ import './SpeakingTopics.css';
 export default function SpeakingTopics({ topics }) {
   if (!topics || topics.length === 0) return null;
 
+  // Requirement 5.3: Publicly display ONLY delivered topics. Hide developing topics from public view.
   const validTopics = topics
-    .filter(t => t.visible)
+    .filter(t => t.visible && t.status === 'delivered')
     .sort((a, b) => a.order - b.order);
 
   if (validTopics.length === 0) return null;
@@ -21,7 +22,7 @@ export default function SpeakingTopics({ topics }) {
         <span className="speaking-topics__label">Speaking</span>
         <h2 id="speaking-topics-heading" className="speaking-topics__title">Signature Topics</h2>
         <p className="speaking-topics__subtitle">
-          Keynotes and practical talks designed to transform how audiences communicate, present, and lead under pressure.
+          Keynotes on communication, agency, courage and opportunity — designed to help audiences think clearly, communicate confidently and take meaningful action when outcomes are uncertain.
         </p>
       </header>
 
@@ -43,12 +44,16 @@ export default function SpeakingTopics({ topics }) {
           const focalY = topic.image?.focalPoint?.y ?? 0.5;
           const objectPosition = `${focalX * 100}% ${focalY * 100}%`;
 
+          // Custom status label: use deliveredAt if present (e.g. "TEDxNITSrinagar")
+          const statusText = topic.statusLabel
+            || (topic.deliveredAt ? `Delivered at ${topic.deliveredAt}` : 'Delivered Keynote');
+
           return (
             <article key={topic.id} className={className}>
               <div className="topic-card__content">
                 <div className="topic-card__top">
                   <span className={`topic-card__status topic-card__status--${topic.status}`}>
-                    {topic.status === 'delivered' ? 'Delivered Keynote' : 'In Development'}
+                    {statusText}
                   </span>
                   <span className="topic-card__index" aria-hidden="true">
                     0{index + 1}
@@ -56,6 +61,13 @@ export default function SpeakingTopics({ topics }) {
                 </div>
                 
                 <h3 className="topic-card__title">{topic.title}</h3>
+                
+                {topic.deliveryNote && (
+                  <p className="topic-card__delivery-note" style={{ color: 'var(--color-primary)', fontWeight: 600, fontSize: '0.875rem', marginTop: '-0.5rem', marginBottom: '0.75rem' }}>
+                    {topic.deliveryNote}
+                  </p>
+                )}
+                
                 <p className="topic-card__summary">{topic.summary}</p>
                 
                 <div className="topic-card__details">

@@ -202,3 +202,24 @@ button {
   border-color: var(--color-foreground);
   background-color: rgba(255, 255, 255, 0.05);
 }
+
+/* ============================================================
+   NETLIFY PUBLIC UI SUPPRESSION
+   Requirement 2.2: Normal public visitors MUST NOT see any
+   Netlify badge, toolbar, or "Powered by Netlify" UI.
+   ============================================================ */
+.netlify-badge,
+#netlify-badge,
+[data-netlify-badge],
+.netlify-identity-menu,
+.netlify-toolbar,
+#netlify-toolbar,
+div[data-netlify-deploy-id],
+iframe[id^="netlify"],
+iframe[src*="netlify.com/toolbar"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+

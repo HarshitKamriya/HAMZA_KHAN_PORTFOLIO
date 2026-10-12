@@ -1,0 +1,115 @@
+/* ============================================================
+   Watch Hamza Speak Section Styles
+   ============================================================ */
+
+.watch-speak {
+  padding: clamp(4rem, 8vw, 6.5rem) 0;
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.watch-speak__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.watch-speak__header {
+  text-align: center;
+  max-width: 60ch;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.watch-speak__eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: var(--text-label-weight);
+  letter-spacing: var(--text-label-ls);
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.watch-speak__title {
+  font-family: var(--font-display);
+  font-size: var(--text-heading-xl);
+  font-weight: var(--text-heading-xl-weight);
+  color: var(--color-foreground);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.watch-speak__subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-body-md);
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Video Grid — 2 columns on desktop, 1 on mobile */
+.watch-speak__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 899px) {
+  .watch-speak__grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}
+
+/* Proof Photos Strip (Speaking Page) */
+.watch-speak__proof-photos {
+  margin-top: 1.5rem;
+}
+
+.watch-speak__photos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .watch-speak__photos-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.watch-speak__photo-card {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.watch-speak__photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.watch-speak__photo-card:hover .watch-speak__photo-img {
+  transform: scale(1.03);
+}
+
+.watch-speak__photo-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(9, 9, 18, 0.9) 100%);
+  font-family: var(--font-body);
+  font-size: var(--text-body-xs);
+  color: var(--color-foreground);
+}

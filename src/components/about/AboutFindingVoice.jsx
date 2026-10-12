@@ -1,38 +1,69 @@
 import './AboutFindingVoice.css';
 
 /**
- * AboutFindingVoice
+ * AboutMilestoneStrip (Section A5)
  * 
- * Section A5: The chronological journey (timeline) without using forced scroll animations.
- * 
- * @param {{ milestones: import('../../cms/types').JourneyMilestone[] }} props
+ * Factual, short milestone progression without resume filler:
+ * School Speaking → Competitions → Mentorship → Championship → TEDx → Workshops → Coaching
+ * Includes the 2025 Toastmasters Division Champion award plaque proof.
  */
-export default function AboutFindingVoice({ milestones }) {
-  if (!milestones || milestones.length === 0) return null;
-
-  const validMilestones = milestones
-    .filter(m => m.visible && m.status === 'published')
-    .sort((a, b) => a.order - b.order);
-
-  if (validMilestones.length === 0) return null;
+export default function AboutFindingVoice() {
+  const steps = [
+    'School Speaking',
+    'Competitions',
+    'Mentorship',
+    'Championship',
+    'TEDx',
+    'Workshops',
+    'Coaching'
+  ];
 
   return (
-    <section className="milestones" aria-labelledby="milestones-heading">
-      <div className="milestones__inner">
-        <header className="milestones__header">
-          <span className="milestones__label">The Journey</span>
-          <h2 id="milestones-heading" className="milestones__title">Finding a Voice</h2>
+    <section className="milestones-strip" aria-labelledby="milestones-strip-heading">
+      <div className="milestones-strip__inner container">
+        <header className="milestones-strip__header">
+          <span className="milestones-strip__label">Milestones & Craft</span>
+          <h2 id="milestones-strip-heading" className="milestones-strip__title">
+            The Path of Deliberate Practice
+          </h2>
         </header>
 
-        <div className="milestones__list" role="list">
-          {validMilestones.map((milestone) => (
-            <article key={milestone.id} className="milestone" role="listitem">
-              <span className="milestone__category">{milestone.category}</span>
-              <h3 className="milestone__title">{milestone.title}</h3>
-              <p className="milestone__desc">{milestone.description}</p>
-            </article>
+        {/* Short factual milestone flow */}
+        <div className="milestones-strip__flow" aria-label="Speaking and coaching journey milestones">
+          {steps.map((step, idx) => (
+            <div key={step} className="milestones-strip__step">
+              <span className="milestones-strip__step-num">0{idx + 1}</span>
+              <span className="milestones-strip__step-name">{step}</span>
+              {idx < steps.length - 1 && (
+                <span className="milestones-strip__arrow" aria-hidden="true">→</span>
+              )}
+            </div>
           ))}
         </div>
+
+        {/* Recognition proof: 2025 Toastmasters Division Championship plaque */}
+        <div className="milestones-strip__proof">
+          <div className="milestones-strip__proof-card">
+            <div className="milestones-strip__proof-media">
+              <img
+                src="/media/06_award_plaque.jpeg"
+                alt="2025 Toastmasters Division Champion Türkiye Award Plaque"
+                className="milestones-strip__proof-img"
+                loading="lazy"
+                width="600"
+                height="450"
+              />
+            </div>
+            <div className="milestones-strip__proof-info">
+              <span className="milestones-strip__proof-badge">Recognition & Distinction</span>
+              <h3 className="milestones-strip__proof-title">2025 Toastmasters Division Champion — Türkiye</h3>
+              <p className="milestones-strip__proof-desc">
+                Competitive speaking across international divisions, refining structure, emotional connection, and high-pressure delivery under competitive constraints.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );

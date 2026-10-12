@@ -5,7 +5,7 @@ import './WorkshopEngagements.css';
  * 
  * @param {{ engagements: import('../../cms/types').WorkshopEngagement[] }} props
  */
-export default function WorkshopEngagements({ engagements }) {
+export default function WorkshopEngagements({ engagements, heading }) {
   if (!engagements || engagements.length === 0) return null;
 
   const validEngagements = engagements
@@ -14,12 +14,14 @@ export default function WorkshopEngagements({ engagements }) {
 
   if (validEngagements.length === 0) return null;
 
+  const sectionTitle = heading || 'Selected Workshops & Engagements';
+
   return (
     <section className="workshop-engagements" aria-labelledby="engagements-heading">
       <div className="workshop-engagements__inner">
         <header className="workshop-engagements__header">
           <span className="workshop-engagements__label">Past Engagements</span>
-          <h2 id="engagements-heading" className="workshop-engagements__title">Selected Client Workshops</h2>
+          <h2 id="engagements-heading" className="workshop-engagements__title">{sectionTitle}</h2>
           <p className="workshop-engagements__subtitle">
             A track record of facilitating focused, practical communication sessions for teams, founders, and professionals.
           </p>

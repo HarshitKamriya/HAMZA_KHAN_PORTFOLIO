@@ -19,6 +19,25 @@ export default function Footer({ siteSettings }) {
     { label: 'Contact', url: '/contact' }
   ];
 
+  const socialLinks = siteSettings?.socialLinks || [];
+  const linkedInLink = socialLinks.find(s => s.platform?.toLowerCase() === 'linkedin');
+  const instagramLink = socialLinks.find(s => s.platform?.toLowerCase() === 'instagram');
+
+  // URL must be an actual profile URL, not empty, placeholder, or domain root
+  const hasValidLinkedIn = Boolean(
+    linkedInLink?.url &&
+    linkedInLink.url.trim().length > 0 &&
+    linkedInLink.url.startsWith('http') &&
+    !linkedInLink.url.replace(/\/$/, '').endsWith('linkedin.com')
+  );
+
+  const hasValidInstagram = Boolean(
+    instagramLink?.url &&
+    instagramLink.url.trim().length > 0 &&
+    instagramLink.url.startsWith('http') &&
+    !instagramLink.url.replace(/\/$/, '').endsWith('instagram.com')
+  );
+
   return (
     <footer className="site-footer" role="contentinfo" aria-label="Site footer">
       <div className="site-footer__inner container">
@@ -78,29 +97,61 @@ export default function Footer({ siteSettings }) {
           <div className="site-footer__nav-col">
             <span className="site-footer__col-title">Connect</span>
             <ul className="site-footer__list">
+              {/* LinkedIn: CMS owner-editable, safe non-clickable until final URL supplied */}
               <li>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="site-footer__link"
-                >
-                  LinkedIn
-                </a>
+                {hasValidLinkedIn ? (
+                  <a
+                    href={linkedInLink.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="site-footer__link"
+                  >
+                    LinkedIn
+                  </a>
+                ) : (
+                  <span
+                    className="site-footer__link site-footer__link--pending"
+                    title="LinkedIn profile link coming soon"
+                    aria-disabled="true"
+                  >
+                    LinkedIn <span className="site-footer__link-note">(Pending)</span>
+                  </span>
+                )}
               </li>
+
+              {/* Instagram: Replaces X/Twitter, CMS owner-editable, non-clickable until URL exists */}
               <li>
-                <a
-                  href="https://x.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="site-footer__link"
-                >
-                  X (Twitter)
-                </a>
+                {hasValidInstagram ? (
+                  <a
+                    href={instagramLink.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="site-footer__link"
+                  >
+                    Instagram
+                  </a>
+                ) : (
+                  <span
+                    className="site-footer__link site-footer__link--pending"
+                    title="Instagram profile link coming soon"
+                    aria-disabled="true"
+                  >
+                    Instagram <span className="site-footer__link-note">(Pending)</span>
+                  </span>
+                )}
               </li>
+
+              {/* Direct Inquiry — high-value conversion pathway */}
               <li>
-                <Link to="/contact" className="site-footer__link">
+                <Link to="/contact" className="site-footer__link site-footer__link--highlight">
                   Direct Inquiry
+                </Link>
+              </li>
+
+              {/* Consolidated FAQ anchor link */}
+              <li>
+                <Link to="/contact#faq" className="site-footer__link">
+                  FAQ
                 </Link>
               </li>
             </ul>

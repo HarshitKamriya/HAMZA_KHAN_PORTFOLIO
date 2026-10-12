@@ -1,6 +1,6 @@
 import Hero from '../components/hero/Hero';
 import CredibilityStrip from '../components/credibility/CredibilityStrip';
-import VideoShowcase from '../components/video/VideoShowcase';
+import WatchHamzaSpeak from '../components/video/WatchHamzaSpeak';
 import WorkWithHamza from '../components/services/WorkWithHamza';
 import StoryPreview from '../components/story/StoryPreview';
 import TestimonialSection from '../components/testimonials/TestimonialSection';
@@ -11,8 +11,14 @@ import { useHomePage } from '../cms/hooks';
 /**
  * Home Page
  * 
- * Renders the 7 major sections of the homepage in order.
- * All content is driven by the CMS data.
+ * Renders the major sections of the homepage in order:
+ * 1. Hero
+ * 2. Credibility Strip (Recognized As)
+ * 3. Watch Hamza Speak (2 lazy YouTube slots)
+ * 4. Work With Hamza (Commercial pathways)
+ * 5. Story Preview
+ * 6. Testimonial (Hatice Gülnhal Yavuz)
+ * 7. Closing Inquiry
  */
 export default function Home() {
   const { data, loading, error } = useHomePage();
@@ -21,11 +27,13 @@ export default function Home() {
     console.error('Failed to load homepage content:', error);
   }
 
+  const videos = data?.speakingVideos || (data?.featuredVideo ? [data.featuredVideo] : []);
+
   return (
     <>
       <SEO
         title=""
-        description={data?.hero?.subline || 'I help professionals turn complex ideas into clear, confident communication — especially under pressure.'}
+        description={data?.hero?.subline || 'Hamza helps professionals make complex ideas clear and communicate confidently, especially under pressure.'}
         canonicalPath="/"
         ogImage={data?.hero?.image?.url || '/media/hero-stage.png'}
       />
@@ -34,7 +42,7 @@ export default function Home() {
       {!loading && data && (
         <>
           <CredibilityStrip credentials={data.credentials} />
-          <VideoShowcase video={data.featuredVideo} />
+          <WatchHamzaSpeak videos={videos} />
           <WorkWithHamza services={data.services} />
           <StoryPreview content={data.storyPreview} />
           <TestimonialSection testimonials={data.featuredTestimonials} />

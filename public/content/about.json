@@ -1,40 +1,39 @@
 {
   "title": "About Hamza Khan",
-  "seoDescription": "The story and philosophy of Hamza Khan, professional speaker and communication coach.",
+  "seoDescription": "The story and communication philosophy of Hamza Khan — professional speaker, workshop facilitator, and communication coach.",
   "status": "published",
   "intro": {
     "heading": "The Story Behind Move Before You Know",
-    "introduction": "I am a professional speaker and communication coach originally from Kashmir. My journey to the stage was not a straight line, but a series of unpredictable pivots that taught me the true value of clear communication under pressure.",
+    "introduction": "I am a professional speaker and communication coach. My journey to the stage was not a straight line, but a series of unpredictable pivots that taught me the true value of clear communication under pressure.",
     "portrait": {
       "id": "about-portrait",
       "url": "/media/Startup Event Portrait with Trophy and Microphone.png",
       "type": "image",
-      "alt": "Hamza Khan at a startup event with trophy and microphone",
-      "focalPoint": { "x": 0.5, "y": 0.25 },
+      "alt": "Hamza Khan with speaking distinction",
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.25
+      },
       "status": "published"
-    },
-    "primaryCTA": {
-      "label": "Explore Speaking & Workshops",
-      "url": "/speaking-workshops"
-    },
-    "secondaryCTA": {
-      "label": "Explore Coaching",
-      "url": "/coaching"
     },
     "visible": true
   },
   "chapters": [
     {
-      "id": "starting-point",
-      "chapterLabel": "01. Starting Point",
-      "heading": "Big ambitions. Unclear paths.",
-      "body": "Growing up in Kashmir, I always had big ambitions. But like many in my environment, I faced deep uncertainty around opportunities, background, and finances. The path forward was rarely obvious, and the resources were often limited. I had to learn early on how to navigate environments where the rules were not written for me.",
+      "id": "finding-a-voice",
+      "chapterLabel": "01 — FINDING A VOICE",
+      "subtitle": "Before the stages.",
+      "heading": "When your world feels small, learning to speak reaches beyond it.",
+      "body": "I grew up in Kashmir and spent a lot of my early life focused on academics.\n\nThere were stretches when the world outside felt distant, and I spent a lot of time with my own thoughts — writing, thinking, and trying to understand what I wanted from life.\n\nBut whenever I had the chance to speak, I took it.\n\nI debated. I presented in class. I spoke at school assemblies.\n\nI was nervous. I was insecure about my English. But I loved the feeling of having something to say and being heard.\n\nSpeaking gave me something academics alone didn’t.\n\nIt made me feel visible, useful and connected to people.\n\nLooking back, I think that is where my relationship with communication began.\n\nWhen your world feels small, learning how to express yourself can become a way to reach beyond it.",
       "image": {
-        "id": "chapter-certificate",
-        "url": "/media/Certificate of Completion Celebration.png",
+        "id": "chapter-1-img",
+        "url": "/media/13_about_story_01.png",
         "type": "image",
-        "alt": "Hamza Khan receiving a certificate of completion",
-        "focalPoint": { "x": 0.5, "y": 0.4 },
+        "alt": "Hamza Khan in earlier speaking reflections",
+        "focalPoint": {
+          "x": 0.5,
+          "y": 0.35
+        },
         "status": "published"
       },
       "order": 1,
@@ -42,82 +41,73 @@
       "visible": true
     },
     {
-      "id": "setbacks",
-      "chapterLabel": "02. The Setbacks",
-      "heading": "When the door closes twice.",
-      "body": "After being accepted to a university in the United States, I realized the tuition was simply not financially viable. I pivoted and tried to study in Türkiye. The visa application was rejected. I applied again. It was rejected a second time. I still remember the moment my sister came into my bedroom to tell me about the second rejection. It was a profound lesson in facing closed doors when you've already committed to the journey.",
+      "id": "choosing-a-direction",
+      "chapterLabel": "02 — CHOOSING A DIRECTION",
+      "subtitle": "When the door closes twice.",
+      "heading": "You can't choose your starting point. But you can choose your next move.",
+      "body": "When one of my biggest dreams was simply to see more of the world.\n\nI was accepted to a university in the United States, but I couldn’t afford the tuition.\n\nSo I looked elsewhere and eventually applied to study in Türkiye.\n\nMy visa was rejected.\n\nI applied again.\n\nRejected again.\n\nI still remember my sister coming into my room one morning to tell me about that second rejection.\n\nAt that moment, it felt much bigger than a visa.\n\nI started wondering whether my circumstances were deciding the rest of my life for me.\n\nLooking back, I had made one major mistake:\n\nI had mistaken my starting point for my future.\n\nI couldn’t choose where I was born.\n\nI couldn’t control every financial circumstance.\n\nAnd I couldn’t guarantee where life would eventually take me.\n\nBut I could still choose my next move.\n\nSo I applied a third time.\n\nThis time, I got through.\n\nYears later, that experience became the foundation of Move Before You Know:\n\n“You don’t choose your starting point. You can’t guarantee your destination. But you can choose your direction.”",
       "order": 2,
       "status": "published",
       "visible": true
     },
     {
-      "id": "direction",
-      "chapterLabel": "03. Choosing a Direction",
-      "heading": "Saying yes to the unfamiliar.",
-      "body": "I applied a third time, and finally, it succeeded. Moving to Türkiye introduced me to entirely unfamiliar opportunities. I found myself in environments I couldn't have predicted. I decided to start saying 'yes' to these new challenges, seeking out mentorship, and letting the unfamiliar shape my next steps.",
+      "id": "passion-into-craft",
+      "chapterLabel": "03 — TURNING PASSION INTO CRAFT",
+      "subtitle": "Learning to be heard.",
+      "heading": "Confidence grows from repeated evidence that you can do the thing.",
+      "body": "Moving to Türkiye opened doors I couldn’t have predicted.\n\nBut speaking itself wasn’t new to me. I had loved it for years.\n\nWhat changed was that I started treating communication as a craft.\n\nI recorded myself.\n\nI entered competitions.\n\nI asked for feedback.\n\nI studied speakers I admired.\n\nI reached out to people who were far better than me and asked them to teach me.\n\nWhenever I felt stuck, I kept returning to one question:\n\nWhat can I do next?\n\nOver time, something I had loved instinctively became something I practised deliberately.\n\nThat process eventually took me into competitive speaking, international speaking opportunities and, in 2025, becoming a Toastmasters Division Champion in Türkiye.\n\nI learned that confidence rarely comes before action. It grows from repeated evidence that you can do the thing.",
       "image": {
-        "id": "about-transition",
-        "url": "/media/Formal Diplomatic Handshake in an Elegant Hall.png",
+        "id": "chapter-3-award",
+        "url": "/media/06_award_plaque.jpeg",
         "type": "image",
-        "alt": "Hamza Khan in a formal diplomatic handshake at an elegant hall",
-        "focalPoint": { "x": 0.5, "y": 0.35 },
+        "alt": "2025 Toastmasters Division Champion Türkiye Award Plaque",
+        "focalPoint": {
+          "x": 0.5,
+          "y": 0.5
+        },
         "status": "published"
       },
       "order": 3,
       "status": "published",
       "visible": true
-    }
-  ],
-  "milestones": [
-    {
-      "id": "ms-speaking-early",
-      "title": "Early Speaking Experiences",
-      "description": "Entered speaking competitions to challenge my own communication barriers and build confidence.",
-      "category": "speaking",
-      "order": 1,
-      "status": "published",
-      "visible": true
     },
     {
-      "id": "ms-mentorship",
-      "title": "Seeking Mentorship",
-      "description": "Actively sought out mentors who could help me refine my structure, delivery, and stage presence.",
-      "category": "mentorship",
-      "order": 2,
-      "status": "published",
-      "visible": true
-    },
-    {
-      "id": "ms-opportunities",
-      "title": "Embracing New Environments",
-      "description": "Began accepting speaking opportunities in unfamiliar environments, learning to adapt to different audiences.",
-      "category": "speaking",
-      "order": 3,
-      "status": "published",
-      "visible": true
-    },
-    {
-      "id": "ms-teaching",
-      "title": "Transition to Teaching",
-      "description": "Started delivering teaching work, sharing the frameworks that helped me find my own voice.",
-      "category": "teaching",
+      "id": "speaking-to-teaching",
+      "chapterLabel": "04 — FROM SPEAKING TO TEACHING",
+      "subtitle": "Helping other people find their voice.",
+      "heading": "Turning what you know into opportunities.",
+      "body": "As I improved, people started asking me for help with their own communication.\n\nHow do I structure this?\n\nHow do I stop rambling?\n\nHow do I sound more confident?\n\nHow do I explain something complicated simply?\n\nHow do I speak when the pressure is high?\n\nAnd I began recognizing something familiar in the people I worked with.\n\nThey often knew more than they were able to communicate.\n\nThey had something valuable to say, but they weren’t always able to make other people see it yet.\n\nI knew that feeling.\n\nI know what it feels like to have something to say and struggle to express it.\n\nThat is when communication became more than something I wanted to master for myself.\n\nI wanted to help other people become clearer, more confident and better able to turn what they know into opportunities.",
       "order": 4,
       "status": "published",
       "visible": true
     },
     {
-      "id": "ms-coaching",
-      "title": "Communication Coaching",
-      "description": "Developed into a full-time communication coach, helping other professionals turn complex ideas into clear, confident communication.",
-      "category": "coaching",
+      "id": "what-i-do-today",
+      "chapterLabel": "05 — WHAT I DO TODAY",
+      "subtitle": "Communication with purpose.",
+      "heading": "Move before you know.",
+      "body": "Today, I speak, facilitate workshops and coach people who need to communicate when it matters.\n\nThe format changes.\n\nThe belief underneath it doesn’t.\n\nPeople shouldn’t miss opportunities simply because they haven’t yet learned how to communicate what they know, who they are or what they can contribute.\n\nThat is the work I care about.\n\nHelping people find clarity.\n\nHelping them build confidence through practice.\n\nHelping them communicate what they know in a way other people can understand, trust and act on.\n\nAnd when the road ahead is uncertain, I still come back to the same question that changed my own life:\n\nWhat can I do next?\n\nYou don’t need to know exactly where the next step will lead.\n\nSometimes you simply have to—\n\nMove before you know.",
       "order": 5,
       "status": "published",
       "visible": true
     }
   ],
+  "testimonials": [
+    {
+      "id": "test-dave",
+      "displayName": "Sensei Dave Armstrong",
+      "role": "Retired U.S. Air Force Veteran · Professional Speaker",
+      "quote": "He does not simply want to be on a stage; he wants to become the kind of speaker whose words genuinely serve people.",
+      "category": "Peer Recommendation",
+      "permissionStatus": "approved",
+      "featured": true,
+      "order": 1,
+      "status": "published"
+    }
+  ],
   "philosophy": {
     "quote": "You don't choose your starting point. You can't guarantee your destination. But you can choose your direction.",
-    "explanation": "This philosophy sits at the core of my work today. Whether I am speaking on a stage or coaching a leader 1-on-1, the goal is always the same: to help you take control of the narrative, communicate with clarity, and deliberately choose your direction, no matter the uncertainty you face.",
+    "explanation": "When the road ahead is uncertain, ask: What can I do next? You don't need to know where the next step will lead. Sometimes you simply have to move before you know.",
     "primaryCTA": {
       "label": "Explore Speaking & Workshops",
       "url": "/speaking-workshops"
@@ -131,7 +121,7 @@
   "finalBio": {
     "name": "Hamza Khan",
     "title": "Professional Speaker & Communication Coach",
-    "bio": "Hamza helps professionals turn complex ideas into clear, confident communication—especially under pressure. Drawing from a diverse international background, he equips teams and leaders with the frameworks needed to deliver high-stakes presentations with impact.",
+    "bio": "Hamza helps professionals make complex ideas clear and communicate confidently, especially under pressure. Drawing from competitive public speaking distinctions and international workshops, he equips teams and individuals with practical frameworks to speak with impact.",
     "primaryCTA": {
       "label": "Explore Speaking & Workshops",
       "url": "/speaking-workshops"

@@ -117,6 +117,29 @@
   transform: translateX(2px);
 }
 
+.site-footer__link--pending {
+  color: var(--color-muted);
+  opacity: 0.6;
+  cursor: default;
+  user-select: none;
+}
+
+.site-footer__link--pending:hover {
+  color: var(--color-muted);
+  transform: none;
+}
+
+.site-footer__link-note {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  opacity: 0.8;
+}
+
+.site-footer__link--highlight {
+  color: var(--color-foreground);
+  font-weight: 500;
+}
+
 /* Bottom Bar */
 .site-footer__bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
